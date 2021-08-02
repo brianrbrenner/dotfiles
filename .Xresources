@@ -1,0 +1,82 @@
+xterm*selectToClipboard: true
+xterm*disallowedWindowOps: 20,21,SetXProp
+*.font:	Monospace:pixelsize=18:antialias=true:autohint=true;
+*.fontalt0:Braille:pixelsize=16:antialias=true:autohint=true;
+/* *.fontalt1:JoyPixels:pixelsize=24:antialias=true:autohint=true; */
+*.alpha: 0.95
+
+! colors
+
+! special
+!*.foreground:   #B8BEC9
+!*.background:   #232731
+!*.cursorColor:  #ECEFF4
+!*.revCursorColor:  #555555
+!
+!! black
+!*.color0:       #4C566A
+!*.color8:       #6C768A
+!
+!! red
+!*.color1:       #BF616A
+!*.color9:       #af7370
+!
+!! green
+!*.color2:       #A3BE8C
+!*.color10:      #B5CEA8
+!
+!! yellow
+!*.color3:       #D7BA7D
+!*.color11:      #E7cb93
+!
+!! blue
+!*.color4:       #5e81ac
+!*.color12:      #69A8C6
+!
+!! magenta
+!*.color5:       #B48EAD
+!*.color13:      #939ede
+!
+!! cyan
+!*.color6:       #88c0d0
+!*.color14:      #69BAC8
+!
+!! white
+!*.color7:       #ABB2BF
+!*.color15:      #D8DEE9
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Gruvbox Material Dark
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*background: #1d2021
+! medium
+! *background: #282828
+! soft
+! *background: #32302f
+
+*foreground: #d4be98
+
+! Black + DarkGrey
+*color0:  #32302f
+*color8:  #32302f
+! DarkRed + Red
+*color1:  #ea6962
+*color9:  #ea6962
+! DarkGreen + Green
+*color2:  #a9b665
+*color10: #a9b665
+! DarkYellow + Yellow
+*color3:  #e78a4e
+*color11: #e78a4e
+! DarkBlue + Blue
+*color4:  #7daea3
+*color12: #7daea3
+! DarkMagenta + Magenta
+*color5:  #d3869b
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #89b482
+*color14: #89b482
+! LightGrey + White
+*color7:  #d4be98
+*color15: #d4be98
