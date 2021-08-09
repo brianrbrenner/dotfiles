@@ -39,11 +39,11 @@ PROMPT+="\$vcs_info_msg_0_ "
 # Plugs
 source /home/$USER/.config/zshplugs/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /home/$USER/.config/zshplugs/zsh-completions/zsh-completions.plugin.zsh
-source /home/$USER/.config/zshplugs/fsh/fast-syntax-highlighting.plugin.zsh
+source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Aliases
 alias xq='sudo xbps-query -Rs'
 
 # Applications
-export BROWSER=/usr/bin/chromium
-export TERMINAL=/usr/local/bin/st
+# export BROWSER=/usr/bin/chromium
+# export TERMINAL=/usr/local/bin/st
