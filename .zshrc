@@ -41,9 +41,11 @@ source /home/$USER/.config/zshplugs/zsh-autosuggestions/zsh-autosuggestions.plug
 source /home/$USER/.config/zshplugs/zsh-completions/zsh-completions.plugin.zsh
 source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-# Aliases
-alias xq='sudo xbps-query -Rs'
-
 # Applications
 # export BROWSER=/usr/bin/chromium
-# export TERMINAL=/usr/local/bin/st
+export TERMINAL=/usr/local/bin/st
+export PATH=/usr/local/share/npm/bin:$PATH
+
+# Java lsp for neovim (requires JDTLS at this location)
+export JDTLS_HOME=/home/$USER/.config/jdtls_root
+
