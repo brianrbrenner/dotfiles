@@ -1,6 +1,8 @@
 -- plugin: nvim-compe
 --- https://github.com/hrsh7th/nvim-compe
 
+vim.o.completeopt = "menuone,noselect"
+
 require('compe').setup {
   enabled = true,
   autocomplete = true,

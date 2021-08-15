@@ -25,6 +25,7 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'hrsh7th/nvim-compe'
 Plug 'windwp/nvim-autopairs'
+Plug 'romgrk/barbar.nvim'
 
 call plug#end()
 
@@ -61,6 +62,7 @@ require'lspconfig'.clangd.setup{}
 require('nvim-compe/main')
 require('nvim-lualine/main')
 require('nvim-tree/main')
+require('nvim-barbar/main')
 
 EOF
 
