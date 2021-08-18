@@ -1,5 +1,6 @@
 syntax on
 set termguicolors
+set noshowmode
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -56,14 +57,13 @@ colorscheme gruvbox-material
 
 lua <<EOF
 
--- autopairs
 require('nvim-autopairs').setup{}
 
 -- lsp config
 require'lspconfig'.jdtls.setup{} 
 require'lspconfig'.clangd.setup{}
 
--- compe / lualine / treesittter 
+-- configurations for each plugin
 require('nvim-compe/main')
 require('nvim-lualine/main')
 require('nvim-tree/main')

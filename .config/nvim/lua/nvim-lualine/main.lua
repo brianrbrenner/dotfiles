@@ -105,7 +105,7 @@ ins_left {
     vim.api.nvim_command(
         'hi! LualineMode guifg=' .. mode_color[vim.fn.mode()] .. " guibg=" ..
             colors.bg)
-    return ''
+    return ''
   end,
   color = "LualineMode",
   left_padding = 0
@@ -171,7 +171,7 @@ ins_left {
     return msg
   end,
   icon = ' LSP:',
-  color = {fg = '#ffffff', gui = 'bold'}
+  color = {fg = '#d4be98', gui = 'bold'}
 }
 
 -- Add components to right sections
