@@ -7,7 +7,7 @@
 
 -- plugin: nvim-compe
 --- https://github.com/hrsh7th/nvim-compe
-set completeopt=menuone,noselect
+vim.o.completeopt = "menuone,noselect"
 
 require('compe').setup {
   enabled = true,
