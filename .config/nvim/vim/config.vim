@@ -40,6 +40,8 @@ nnoremap <silent> <C-j> <Cmd>Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
 inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
 nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
+nnoremap <silent> <leader>cd <Cmd>Lspsaga show_line_diagnostics<CR>
+
 
 " telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -91,9 +93,9 @@ let g:nvim_tree_window_picker_exclude = {
 let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
 let g:nvim_tree_show_icons = {
     \ 'git': 1,
-    \ 'folders': 0,
-    \ 'files': 0,
-    \ 'folder_arrows': 0,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ 'folder_arrows': 1,
     \ }
 "If 0, do not show the icons for one of 'git' 'folder' and 'files'
 "1 by default, notice that if 'files' is 1, it will only display
@@ -143,6 +145,5 @@ highlight NvimTreeFolderIcon guibg=blue
 highlight link LspSagaFinderSelection Search
 
 " Colorscheme
-let NERDTreeShowHidden=1
 let g:gruvbox_material_transparent_background=1
 colorscheme gruvbox-material
