@@ -40,4 +40,5 @@ require('nvim-lspsaga/main')
 
 EOF
 
-source ~/.config/nvim/vim/config.vim
+source $HOME/.config/nvim/settings/config.vim
+source $HOME/.config/nvim/settings/mappings.vim
