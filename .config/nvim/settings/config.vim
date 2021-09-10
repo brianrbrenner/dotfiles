@@ -118,3 +118,9 @@ highlight link LspSagaFinderSelection Search
 " Colorscheme
 let g:gruvbox_material_transparent_background=1
 colorscheme gruvbox-material
+
+" reset cursor on exit
+augroup RestoreCursorShapeOnExit
+    autocmd!
+    autocmd VimLeave * set guicursor=a:ver25
+augroup END    
