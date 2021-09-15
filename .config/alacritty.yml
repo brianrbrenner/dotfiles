@@ -62,7 +62,7 @@ font:
     #style: Italic
 
   # Point size
-  size: 8.4
+  size: 16
 
 colors:
   # Default colors
