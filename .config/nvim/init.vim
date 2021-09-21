@@ -14,7 +14,9 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ethanholz/nvim-lastplace'
-
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'BurntSushi/ripgrep'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -23,12 +25,14 @@ call plug#end()
 lua <<EOF
 
 require('telescope').setup{}
+require('telescope').load_extension('fzf')
 require('nvim-autopairs').setup{}
 require('nvim-lastplace').setup{}
 
 -- lsp config
 require'lspconfig'.jdtls.setup{} 
 require'lspconfig'.clangd.setup{}
+require'lspconfig'.tsserver.setup{}
 
 -- configurations for each plugin
 require('nvim-compe/main')
@@ -41,3 +45,4 @@ EOF
 
 source $HOME/.config/nvim/settings/config.vim
 source $HOME/.config/nvim/settings/mappings.vim
+source $HOME/.config/nvim/settings/start-screen.vim
