@@ -117,7 +117,8 @@ highlight link LspSagaFinderSelection Search
 
 " Colorscheme
 hi EndOfBuffer ctermbg=None
-let g:sonokai_style = 'default'
+let g:sonokai_style = 'shusia'
+let g:sonokai_disable_italic_comment = 1
 let g:sonokai_transparent_background = 1
 colorscheme sonokai
 
