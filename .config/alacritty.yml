@@ -92,7 +92,7 @@ font:
     #    cyan:    '0x89b482'
     #    white:   '0xd4be98'
 
- primary:
+    primary:
       background: '#1e1e1e'
       foreground: '#d4d4d4'
 
@@ -129,4 +129,4 @@ cursor:
   #   - | Beam
   style: 'Beam'
 
-background_opacity: 0.95
+    #background_opacity: 0.95
