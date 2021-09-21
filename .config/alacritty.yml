@@ -37,7 +37,7 @@ font:
     family: 'JetBrainsMono Nerd Font'
 
     # The `style` can be specified to pick a specific face.
-    style: SemiBold
+    #style: SemiBold
 
   # Bold font face
   bold:
@@ -64,61 +64,30 @@ font:
   # Point size
   size: 16
 
-  colors:
-    #  # Default colors
-    #  primary:
-    #    background: '0x282828'
-    #    foreground: '0xd4be98'
-    #
-    #  # Normal colors
-    #  normal:
-    #    black:   '0x3c3836'
-    #    red:     '0xea6962'
-    #    green:   '0xa9b665'
-    #    yellow:  '0xd8a657'
-    #    blue:    '0x7daea3'
-    #    magenta: '0xd3869b'
-    #    cyan:    '0x89b482'
-    #    white:   '0xd4be98'
-    #
-    #  # Bright colors
-    #  bright:
-    #    black:   '0x3c3836'
-    #    red:     '0xea6962'
-    #    green:   '0xa9b665'
-    #    yellow:  '0xd8a657'
-    #    blue:    '0x7daea3'
-    #    magenta: '0xd3869b'
-    #    cyan:    '0x89b482'
-    #    white:   '0xd4be98'
+colors:
+  primary:
+    background: "0x2c2e34"
+    foreground: "0xe2e2e3"
 
-    primary:
-      background: '#1e1e1e'
-      foreground: '#d4d4d4'
+  normal:
+    black: "0x181819"
+    red: "0xfc5d7c"
+    green: "0x9ed072"
+    yellow: "0xe7c664"
+    blue: "0x76cce0"
+    magenta: "0xb39df3"
+    cyan: "0xf39660"
+    white: "0xe2e2e3"
 
-    cursor:
-      text: '#d4d4d4'
-      cursor: '#d4d4d4'
-
-    normal:
-      black:   '#1e1e1e'
-      red:     '#f44747'
-      green:   '#608b4e'
-      yellow:  '#dcdcaa'
-      blue:    '#569cd6'
-      magenta: '#c678dd'
-      cyan:    '#56b6c2'
-      white:   '#d4d4d4'
-
-    bright:
-      black:   '#545454'
-      red:     '#f44747'
-      green:   '#608b4e'
-      yellow:  '#dcdcaa'
-      blue:    '#569cd6'
-      magenta: '#c678dd'
-      cyan:    '#56b6c2'
-      white:   '#d4d4d4'
+  bright:
+    black: "0x181819"
+    red: "0xfc5d7c"
+    green: "0x9ed072"
+    yellow: "0xe7c664"
+    blue: "0x76cce0"
+    magenta: "0xb39df3"
+    cyan: "0xf39660"
+    white: "0xe2e2e3"
 
 cursor:
   # Cursor style
@@ -129,4 +98,4 @@ cursor:
   #   - | Beam
   style: 'Beam'
 
-    #background_opacity: 0.95
+background_opacity: .97
