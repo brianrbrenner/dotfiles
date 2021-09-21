@@ -4,8 +4,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" I hate escape more than anything else
-inoremap jk <Esc>
+" quickly insert an empty line
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
+
+" i hate escape more than anything else
+inoremap jk <esc>
 inoremap kj <Esc>
 
 " TAB in general mode will move to text buffer

@@ -116,10 +116,13 @@ highlight NvimTreeFolderIcon guibg=blue
 highlight link LspSagaFinderSelection Search
 
 " Colorscheme
-let g:gruvbox_material_transparent_background = 1
-let g:gruvbox_material_ui_contrast = 'high'
-let g:gruvbox_material_palette = 'mix'
-colorscheme gruvbox-material
+hi EndOfBuffer ctermbg=None
+let g:vscode_style = "dark"
+colorscheme vscode
+"let g:gruvbox_material_transparent_background = 1
+"let g:gruvbox_material_ui_contrast = 'high'
+"let g:gruvbox_material_palette = 'mix'
+" for c++ files use vscode dark
 
 " reset cursor on exit
 augroup RestoreCursorShapeOnExit
