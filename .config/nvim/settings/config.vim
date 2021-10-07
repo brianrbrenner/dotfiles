@@ -16,6 +16,7 @@ set autoindent
 set smarttab
 set nu
 set nowrap
+set noswapfile
 set smartcase
 set nobackup
 set incsearch

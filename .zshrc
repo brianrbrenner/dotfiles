@@ -49,3 +49,33 @@ if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
 # Java lsp for neovim (requires JDTLS at this location)
 export JDTLS_HOME=/home/$USER/.config/jdtls_root
 
+# rx used to fzf in terminal
+function displayhelp() {
+  printf "
+  rx: open files, cd into directories and stuff
+  using find and fzf.
+  usage: rx [options]
+
+  OPTIONS
+
+  => no arguments \n\t open files via \$opener. (xdg-open is set as default)
+  => -l \n\t open files but don't close fzf.
+  => -d \n\t open directories in a subshell.
+  => -h / --help \n\t display help text.
+  => -z \n\t search for files and open the directory in which they are located.\n\n";}
+
+function rx() {
+  if [[ -z $(command -v fzf) ]]; then
+    printf "install fzf.\
+      \nfzf is required for this script to function."\
+      && exit 0; fi
+
+  case $1 in
+    "") find / -type f 2>/dev/null | fzf --bind=enter:execute'(xdg-open {})' --bind=enter:+close ;;
+    -l) find / -type f 2>/dev/null | fzf --bind=enter:execute'(xdg-open {})' ;;
+    -d) folder="$(find / -type d 2>/dev/null | fzf)" && cd "$folder" ;;
+    -h|--help) displayhelp ;;
+    -z) folder="$(find / -type f 2>/dev/null | fzf)" && \
+      cd "$(dirname $folder)" ;;
+  esac; }
+
