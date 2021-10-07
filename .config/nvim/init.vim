@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'sainnhe/sonokai'
+Plug 'tanvirtin/monokai.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'

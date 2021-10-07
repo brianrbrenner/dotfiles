@@ -115,12 +115,15 @@ let g:nvim_tree_icons = {
 highlight NvimTreeFolderIcon guibg=blue
 highlight link LspSagaFinderSelection Search
 
-" Colorscheme
-hi EndOfBuffer ctermbg=None
-let g:sonokai_style = 'shusia'
-let g:sonokai_disable_italic_comment = 1
-let g:sonokai_transparent_background = 1
-colorscheme sonokai
+hi Normal ctermbg=none guibg=none"
+hi SignColumn ctermbg=none guibg=none"
+hi NormalNC ctermbg=none guibg=none"
+hi MsgArea ctermbg=none guibg=none"
+hi TelescopeBorder ctermbg=none guibg=none"
+hi NvimTreeNormal ctermbg=none guibg=none"
+
+
+colorscheme monokai_pro
 
 " reset cursor on exit
 augroup RestoreCursorShapeOnExit
