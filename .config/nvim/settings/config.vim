@@ -116,13 +116,9 @@ let g:nvim_tree_icons = {
 highlight NvimTreeFolderIcon guibg=blue
 highlight link LspSagaFinderSelection Search
 
-hi Normal ctermbg=none guibg=none"
-hi SignColumn ctermbg=none guibg=none"
-hi NormalNC ctermbg=none guibg=none"
-hi MsgArea ctermbg=none guibg=none"
-hi TelescopeBorder ctermbg=none guibg=none"
-hi NvimTreeNormal ctermbg=none guibg=none"
-
+" colorscheme
+au ColorScheme * hi Normal ctermbg=none guibg=none
+au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
 colorscheme monokai_pro
 
