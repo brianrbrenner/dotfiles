@@ -34,13 +34,6 @@ vnoremap > >gv
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 
-" autopairs remaps
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-
 " compe remaps
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
@@ -51,7 +44,8 @@ nnoremap <silent> K <Cmd>Lspsaga hover_doc<CR>
 inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
 nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
 nnoremap <silent> <leader>d <Cmd>Lspsaga show_line_diagnostics<CR>
-
+nnoremap <silent> <leader>ca :Lspsaga code_action<CR>
+vnoremap <silent> <leader>ca :<C-U>Lspsaga range_code_action<CR>
 
 " telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
