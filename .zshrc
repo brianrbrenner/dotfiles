@@ -46,9 +46,6 @@ export TERMINAL=/usr/local/bin/st
 export PATH=/usr/local/share/npm/bin:$PATH
 if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
 
-# Java lsp for neovim (requires JDTLS at this location)
-export JDTLS_HOME=/home/$USER/.config/jdtls_root
-
 # rx used to fzf in terminal
 function displayhelp() {
   printf "
