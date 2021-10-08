@@ -21,7 +21,7 @@ set smartcase
 set nobackup
 set incsearch
 set scrolloff=8
-set cmdheight=2
+set cmdheight=1
 set relativenumber
 set updatetime=300
 set timeoutlen=500
