@@ -18,12 +18,14 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'BurntSushi/ripgrep'
 Plug 'mhinz/vim-startify'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'akinsho/toggleterm.nvim'
 
 call plug#end()
 
 " Lua config
 
-lua <<EOF
+lua << EOF
 
 require('telescope').setup{}
 require('telescope').load_extension('fzf')
@@ -32,8 +34,8 @@ require('nvim-lastplace').setup{}
 
 -- blankline-nvim
 require("indent_blankline").setup {}
+
 -- lsp config
-require'lspconfig'.jdtls.setup{} 
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.tsserver.setup{}
 
@@ -43,6 +45,8 @@ require('nvim-lualine/main')
 require('nvim-tree/main')
 require('nvim-bufferline/main')
 require('nvim-lspsaga/main')
+require('nvim-lspinstall/main')
+require('nvim-toggleterm/main')
 
 EOF
 
