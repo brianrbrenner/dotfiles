@@ -20,6 +20,7 @@ Plug 'mhinz/vim-startify'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'ray-x/lsp_signature.nvim'
 
 call plug#end()
 
@@ -38,6 +39,7 @@ require("indent_blankline").setup {}
 -- lsp config
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.tsserver.setup{}
+require'lsp_signature'.setup{}
 
 -- configurations for each plugin
 require('nvim-compe/main')
