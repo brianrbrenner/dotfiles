@@ -15,6 +15,7 @@ nnoremap <S-TAB> :bprevious<CR>
 
 " These commands will navigate through buffers in order regardless of which mode you are using
 " e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
+nnoremap <leader>bd :bd<CR>
 nnoremap <S-l> :BufferLineCycleNext<CR>
 nnoremap <S-h> :BufferLineCyclePrev<CR>
 nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>

@@ -41,9 +41,14 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'buffer' },
    -- { name = 'luasnip' },
+    { name = 'path' }
   },
 }
+
+
+
 -- you need setup cmp first put this after cmp.setup()
 require("nvim-autopairs.completion.cmp").setup({
   map_cr = true, --  map <CR> on insert mode
