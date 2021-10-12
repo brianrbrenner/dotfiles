@@ -46,6 +46,7 @@ inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
 nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
 nnoremap <silent> <leader>d <Cmd>Lspsaga show_line_diagnostics<CR>
 nnoremap <silent> <leader>ca :Lspsaga code_action<CR>
+nnoremap <silent> <leader>gd :Lspsaga preview_definition<CR>
 vnoremap <silent> <leader>ca :<C-U>Lspsaga range_code_action<CR>
 
 " telescope remaps

@@ -2,13 +2,19 @@ vim.o.completeopt = "menuone,noselect"
 
 -- nvim-cmp setup
 --local luasnip = require 'luasnip'
+local lspkind = require('lspkind')
 local cmp = require 'cmp'
+
 cmp.setup {
  -- snippet = {
  --   expand = function(args)
  --     luasnip.lsp_expand(args.body)
   --  end,
  -- },
+  formatting = {
+    format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+
+  },
   mapping = {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-n>'] = cmp.mapping.select_next_item(),
