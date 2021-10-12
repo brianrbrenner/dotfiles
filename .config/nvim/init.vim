@@ -51,6 +51,7 @@ require("indent_blankline").setup {}
 require('lsp_signature').setup{}
 
 -- configurations for each plugin
+require('nvim-lspconfig/main')
 require('nvim-cmp/main')
 require('nvim-lualine/main')
 require('nvim-tree/main')
