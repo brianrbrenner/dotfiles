@@ -3,7 +3,8 @@ call plug#begin('~/.vim/plugged')
 
 " Language
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
+" using a fork of lspsaga until fixed for api change of nvim 0.5.1
+Plug 'tami5/lspsaga.nvim'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'nvim-lua/plenary.nvim'
