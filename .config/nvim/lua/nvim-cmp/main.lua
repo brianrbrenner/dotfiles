@@ -12,8 +12,21 @@ cmp.setup {
   --  end,
  -- },
   formatting = {
-    format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    format = function(entry, vim_item)
+      vim_item.kind = string.format("%s %s", lspkind.presets.default[vim_item.kind], vim_item.kind)
+      vim_item.menu = ({
+        nvim_lsp = "ﲳ",
+        nvim_lua = "",
+        treesitter = "",
+        path = "ﱮ",
+        buffer = "﬘",
+        zsh = "",
+        vsnip = "",
+        spell = "暈",
+      })[entry.source.name]
 
+      return vim_item
+    end,
   },
   mapping = {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -52,8 +65,6 @@ cmp.setup {
     { name = 'path' }
   },
 }
-
-
 
 -- you need setup cmp first put this after cmp.setup()
 require("nvim-autopairs.completion.cmp").setup({
