@@ -56,4 +56,17 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>p :Telescope projects<CR>
 
+" dashboard mappings
+"SPC means the leaderkey
+let g:dashboard_custom_shortcut={
+\ 'last_session'       : 'SPC s l',
+\ 'find_history'       : 'SPC f h',
+\ 'find_file'          : 'SPC f f',
+\ 'new_file'           : 'SPC c n',
+\ 'change_colorscheme' : 'SPC t c',
+\ 'find_word'          : 'SPC f a',
+\ 'book_marks'         : 'SPC f b',
+\ }
+nmap <Leader>ss :<C-u>SessionSave<CR>
+nmap <Leader>sl :<C-u>SessionLoad<CR>
 

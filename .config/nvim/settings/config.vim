@@ -27,7 +27,8 @@ set relativenumber
 set updatetime=300
 set timeoutlen=500
 
-
+" Default value is clap
+let g:dashboard_default_executive ='telescope'
 
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue

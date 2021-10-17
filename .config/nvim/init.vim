@@ -28,7 +28,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ethanholz/nvim-lastplace'
 Plug 'BurntSushi/ripgrep'
-Plug 'mhinz/vim-startify'
+Plug 'glepnir/dashboard-nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'ahmedkhalf/project.nvim'
 
@@ -36,7 +36,6 @@ call plug#end()
 
 source $HOME/.config/nvim/settings/config.vim
 source $HOME/.config/nvim/settings/mappings.vim
-source $HOME/.config/nvim/settings/start-screen.vim
 
 " Lua config
 
@@ -57,6 +56,7 @@ require('nvim-lspsaga/main')
 require('nvim-lspinstall/main')
 
 -- configurations for each plugin
+require('nvim-tree/main')
 require('nvim-treesitter/main')
 require('nvim-cmp/main')
 require('nvim-lualine/main')
