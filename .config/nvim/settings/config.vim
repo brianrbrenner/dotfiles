@@ -38,7 +38,7 @@ highlight link LspSagaFinderSelection Search
 au ColorScheme * hi Normal ctermbg=none guibg=none
 au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
-colorscheme monokai_pro
+colorscheme gruvbox-flat 
 
 " reset cursor on exit
 augroup RestoreCursorShapeOnExit
