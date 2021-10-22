@@ -94,7 +94,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x1d2021'
+    background: '0x32302f'
     foreground: '0xd4be98'
 
   # Normal colors
@@ -133,4 +133,4 @@ cursor:
   #   - | Beam
   style: 'Beam'
 
-background_opacity: .95
+background_opacity: .97

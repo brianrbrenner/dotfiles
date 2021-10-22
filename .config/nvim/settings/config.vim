@@ -38,6 +38,8 @@ highlight link LspSagaFinderSelection Search
 au ColorScheme * hi Normal ctermbg=none guibg=none
 au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
+let g:gruvbox_flat_style = "dark"
+let g:gruvbox_transparent=1
 colorscheme gruvbox-flat 
 
 " reset cursor on exit
