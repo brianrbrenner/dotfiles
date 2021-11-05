@@ -4,6 +4,7 @@ let g:mapleader = "\<Space>"
 syntax on
 set hidden
 set termguicolors
+set cc=80
 set t_Co=256
 set noshowmode
 set ruler
