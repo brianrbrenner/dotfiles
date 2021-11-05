@@ -33,6 +33,7 @@ Plug 'BurntSushi/ripgrep'
 Plug 'glepnir/dashboard-nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'ahmedkhalf/project.nvim'
+Plug 'nathom/filetype.nvim'
 
 call plug#end()
 
