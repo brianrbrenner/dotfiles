@@ -42,9 +42,9 @@ source /home/$USER/.config/zshplugs/zsh-completions/zsh-completions.plugin.zsh
 source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Applications
-export TERMINAL=/usr/local/bin/st
+export TERMINAL=/bin/alacritty
 export PATH=/usr/local/share/npm/bin:$PATH
-if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
+export BROWSER=/bin/firefox
 
 # rx used to fzf in terminal
 function displayhelp() {
