@@ -41,12 +41,21 @@ highlight link LspSagaFinderSelection Search
 au ColorScheme * hi Normal ctermbg=none guibg=none
 au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
-let g:gruvbox_flat_style = "dark"
-let g:gruvbox_transparent=1
-colorscheme gruvbox-flat 
+colorscheme monokai_pro
+"let g:gruvbox_flat_style = "dark"
+"let g:gruvbox_transparent=1
+"colorscheme gruvbox-flat
 
 " reset cursor on exit
 augroup RestoreCursorShapeOnExit
     autocmd!
     autocmd VimLeave * set guicursor=a:ver25
-augroup END    
+augroup END
+
+" whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+au BufWinEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+au BufWinLeave * call clearmatches()
