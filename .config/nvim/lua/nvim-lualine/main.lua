@@ -21,7 +21,7 @@ lualine.setup {
       { 'diagnostics', sources = {"nvim_lsp"},
       sections = {'error', 'warn', 'info', 'hint'},
       color_error = "#EA6962", color_warn = "#E78A4E", color_info = "#7dAEA3", color_hint = nil,
-      symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '} }, 
+      symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '} },
       'encoding',
       'filetype'
     },

@@ -4,6 +4,7 @@ let g:mapleader = "\<Space>"
 syntax on
 set hidden
 set termguicolors
+set cursorline
 set cc=80
 set t_Co=256
 set noshowmode
@@ -41,6 +42,9 @@ highlight link LspSagaFinderSelection Search
 au ColorScheme * hi Normal ctermbg=none guibg=none
 au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
+highlight ColorColumn ctermbg=238 guibg=238
+
+"colorscheme gruvbuddy
 colorscheme monokai_pro
 "let g:gruvbox_flat_style = "dark"
 "let g:gruvbox_transparent=1

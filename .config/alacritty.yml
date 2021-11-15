@@ -66,7 +66,7 @@ font:
 
 colors:
   primary:
-    background: '#272822'
+    background: '#37383D'
     foreground: '#F8F8F2'
 
   normal:
@@ -93,6 +93,7 @@ colors:
 #colors:
 #  # Default colors
 #  primary:
+#    #background: '#282c34'
 #    background: '0x32302f'
 #    foreground: '0xd4be98'
 #
@@ -122,7 +123,6 @@ colors:
 #    - { index: 16, color: '0xe78a4e' }
 #    - { index: 17, color: '0xc14a4a' }
 
-
 cursor:
   # Cursor style
   #
@@ -132,7 +132,7 @@ cursor:
   #   - | Beam
   style: 'Beam'
 
-background_opacity: .97
+#background_opacity: .97
 
 env:
   TERM: xterm-256color

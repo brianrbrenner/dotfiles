@@ -13,6 +13,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'williamboman/nvim-lsp-installer'
 
 " Appearance
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
+Plug 'Th3Whit3Wolf/onebuddy'
 Plug 'tanvirtin/monokai.nvim'
 Plug 'eddyekofo94/gruvbox-flat.nvim'
 Plug 'hoob3rt/lualine.nvim'
@@ -58,6 +61,7 @@ require('nvim-cmp/main')
 require('nvim-lualine/main')
 require('nvim-bufferline/main')
 require('nvim-toggleterm/main')
+-- require('colorbuddy').colorscheme('gruvbuddy')
 
 
 
