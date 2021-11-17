@@ -35,16 +35,15 @@ gaps outer 5
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# monitors
+exec_always --no-startup-id ~/.config/i3/2monitor.sh
 exec --no-startup-id picom
 
 # wallpaper
 exec --no-startup-id nitrogen --restore
 
 # tray
-exec --no-startup-id dbus-launch nm-applet
-exec --no-startup-id pasystray
-exec --no-startup-id blueman-applet
-exec --no-startup-id flameshot
+exec_always --no-startup-id ~/.config/i3/tray.sh
 
 # start a terminal
 bindsym $mod+Return exec alacritty
@@ -56,7 +55,7 @@ bindsym $mod+w exec brave-browser
 bindsym $mod+q kill
 
 # settings
-bindsym $mod+Shift+s gnome-control-center
+bindsym $mod+Shift+s exec gnome-control-center
 
 # Create Log out, Reboot, Poweroff bindings
 mode "(S)uspend, (L)ogout, (R)eboot, (P)oweroff" {
