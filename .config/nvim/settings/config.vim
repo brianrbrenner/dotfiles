@@ -5,6 +5,7 @@ syntax on
 set hidden
 set termguicolors
 set cursorline
+set nohlsearch
 set cc=80
 set t_Co=256
 set noshowmode
