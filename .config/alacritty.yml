@@ -63,31 +63,63 @@ font:
 
   # Point size
   size: 8
-
 colors:
+  # Default colors
   primary:
-    background: '#37383D'
-    foreground: '#F8F8F2'
-
+    background: '#232426'
+    foreground: '0xcdcecf'
+  # Normal colors
   normal:
-    black:   '#403E41'
-    red:     '#FF6188'
-    green:   '#A9DC76'
-    yellow:  '#FFD866'
-    blue:    '#FC9867'
-    magenta: '#AB9DF2'
-    cyan:    '#78DCE8'
-    white:   '#FCFCFA'
-
+    black:   '0x393b44'
+    red:     '0xc94f6d'
+    green:   '0x81b29a'
+    yellow:  '0xdbc074'
+    blue:    '0x719cd6'
+    magenta: '0x9d79d6'
+    cyan:    '0x63cdcf'
+    white:   '0xdfdfe0'
+  # Bright colors
   bright:
-    black:   '#727072'
-    red:     '#FF6188'
-    green:   '#A9DC76'
-    yellow:  '#FFD866'
-    blue:    '#FC9867'
-    magenta: '#AB9DF2'
-    cyan:    '#78DCE8'
-    white:   '#FCFCFA'
+    black:   '0x475072'
+    red:     '0xd6616b'
+    green:   '0x58cd8b'
+    yellow:  '0xffe37e'
+    blue:    '0x84cee4'
+    magenta: '0xb8a1e3'
+    cyan:    '0x59f0ff'
+    white:   '0xf2f2f2'
+  indexed_colors:
+    - { index: 16, color: '0xf4a261' }
+    - { index: 17, color: '0xd67ad2' }
+  
+# monokai
+#colors:
+#  primary:
+#background: '#232426'
+##background: '#242429'
+##background: '#282833'
+##background: '#37383D'
+#    foreground: '#F8F8F2'
+#
+#  normal:
+#    black:   '#403E41'
+#    red:     '#FF6188'
+#    green:   '#A9DC76'
+#    yellow:  '#FFD866'
+#    blue:    '#FC9867'
+#    magenta: '#AB9DF2'
+#    cyan:    '#78DCE8'
+#    white:   '#FCFCFA'
+#
+#  bright:
+#    black:   '#727072'
+#    red:     '#FF6188'
+#    green:   '#A9DC76'
+#    yellow:  '#FFD866'
+#    blue:    '#FC9867'
+#    magenta: '#AB9DF2'
+#    cyan:    '#78DCE8'
+#    white:   '#FCFCFA'
 
 # gruvbox-flat 
 #colors:
