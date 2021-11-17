@@ -44,8 +44,8 @@ au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
 highlight ColorColumn ctermbg=238 guibg=238
 
-"colorscheme gruvbuddy
-colorscheme monokai_pro
+colorscheme nightfox
+"colorscheme monokai_pro
 "let g:gruvbox_flat_style = "dark"
 "let g:gruvbox_transparent=1
 "colorscheme gruvbox-flat

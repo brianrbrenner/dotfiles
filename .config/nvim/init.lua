@@ -13,9 +13,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'williamboman/nvim-lsp-installer'
 
 " Appearance
-Plug 'tjdevries/colorbuddy.vim'
-Plug 'tjdevries/gruvbuddy.nvim'
-Plug 'Th3Whit3Wolf/onebuddy'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'tanvirtin/monokai.nvim'
 Plug 'eddyekofo94/gruvbox-flat.nvim'
 Plug 'hoob3rt/lualine.nvim'
