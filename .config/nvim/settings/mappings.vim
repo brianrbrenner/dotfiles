@@ -39,16 +39,6 @@ nnoremap <C-s> :w<CR>
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" lsp-saga remaps
-nnoremap <silent> <leader>j <Cmd>Lspsaga diagnostic_jump_next<CR>
-nnoremap <silent> K <Cmd>Lspsaga hover_doc<CR>
-inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
-nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
-nnoremap <silent> <leader>d <Cmd>Lspsaga show_line_diagnostics<CR>
-nnoremap <silent> <leader>ca :Lspsaga code_action<CR>
-nnoremap <silent> <leader>gd :Lspsaga preview_definition<CR>
-vnoremap <silent> <leader>ca :<C-U>Lspsaga range_code_action<CR>
-
 " telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>

@@ -59,7 +59,7 @@ require('nvim-cmp/main')
 require('nvim-lualine/main')
 require('nvim-bufferline/main')
 require('nvim-toggleterm/main')
--- require('colorbuddy').colorscheme('gruvbuddy')
+require('nvim-nightfox/main')
 
 
 

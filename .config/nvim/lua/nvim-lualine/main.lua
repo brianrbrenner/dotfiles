@@ -3,10 +3,10 @@ if (not status) then return end
 
 lualine.setup {
   options = {
-    icons_enabled = true,
-    theme = 'wombat',
-    section_separators = {'', ''},
-    component_separators = {'', ''},
+    icons_enabled = false; 
+    theme = 'nightfox',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
     disabled_filetypes = {}
   },
   sections = {
