@@ -13,8 +13,7 @@ cd dotfiles
 chmod +x install.sh
 ./install.sh
 ```
-If you would like Network Manager set up run this.
-Services:
+If you would like Network Manager set up run this in dotfiles:
 ```
 chmod +x services.sh
 ./services.sh
