@@ -18,3 +18,4 @@ If you would like Network Manager set up run this in dotfiles:
 chmod +x services.sh
 ./services.sh
 ```
+You can obviously change what you need in the i3 config as needed. For the battery icon in the tray to appear you must enable it in xfce-power-manager-settings.
