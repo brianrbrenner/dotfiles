@@ -32,6 +32,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'ahmedkhalf/project.nvim'
 Plug 'nathom/filetype.nvim'
+Plug 'folke/trouble.nvim'
 
 call plug#end()
 
@@ -53,13 +54,12 @@ require('nvim-lspconfig/main')
 require('nvim-lsp-installer/main')
 
 -- configurations for each plugin
+require('nvim-trouble/main')
 require('nvim-tree/main')
 require('nvim-treesitter/main')
 require('nvim-cmp/main')
-require('nvim-lualine/main')
+--require('nvim-lualine/main')
 require('nvim-bufferline/main')
-require('nvim-toggleterm/main')
+--require('nvim-toggleterm/main')
 require('nvim-nightfox/main')
-
-
 

@@ -1,6 +1,6 @@
 -- following options are the default
 
-vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 require'nvim-tree'.setup {
   -- disables netrw completely

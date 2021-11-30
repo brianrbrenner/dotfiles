@@ -3,7 +3,7 @@ if (not status) then return end
 
 lualine.setup {
   options = {
-    icons_enabled = false; 
+    icons_enabled = true; 
     theme = 'nightfox',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
@@ -22,8 +22,6 @@ lualine.setup {
       sections = {'error', 'warn', 'info', 'hint'},
       color_error = "#EA6962", color_warn = "#E78A4E", color_info = "#7dAEA3", color_hint = nil,
       symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '} },
-      'encoding',
-      'filetype'
     },
     lualine_y = {'progress'},
     lualine_z = {'location'}
