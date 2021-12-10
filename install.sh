@@ -3,7 +3,11 @@
 # THIS INSTALL SCRIPT IS VERY BASIC AND FOR XFCE4 VOID LINUX INSTALLS ONLY
 
 # Applications and dependencies to allow either xfce4 with i3 or just i3 alone
+<<<<<<< HEAD
 sudo xbps-install -Syu xtools tmux dmenu nitrogen i3-gaps i3status neovim subversion NetworkManager network-manager-applet chromium alacritty zsh htop xfce4-pulseaudio-plugin xfce4-alsa-plugin bluez blueman unzip wget picom nerd-fonts-ttf font-awesome5 ripgrep cmake clang valgrind xrandr arandr python3 python3-pip pasystray pulseaudio-utils
+=======
+sudo xbps-install -Syu xtools tmux dmenu nitrogen i3-gaps neovim subversion NetworkManager network-manager-applet chromium alacritty zsh htop xfce4-pulseaudio-plugin xfce4-alsa-plugin bluez blueman unzip wget picom font-iosevka font-awesome5 ripgrep cmake clang valgrind xrandr python3 gcc rustup
+>>>>>>> c304ff644f6b7daa435600eaafe71d5385626da0
 
 # change to zsh
 chsh -s $(which zsh)
