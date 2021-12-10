@@ -6,6 +6,7 @@ set hidden
 set termguicolors
 set cursorline
 set nohlsearch
+set mouse=a
 set cc=80
 set t_Co=256
 set noshowmode
@@ -50,20 +51,22 @@ let g:currentmode={
        \ 'c'  : 'Command ',
        \}
 
-set statusline=
-"set statusline+=%#CursorColumn#
-"set statusline+=%#PmenuSel#
-set statusline+=\ %{toupper(g:currentmode[mode()])}
-set statusline+=%{StatuslineGit()}
-set statusline+=%#LineNr#
-set statusline+=%#192330#
-set statusline+=%=
-"set statusline+=%#CursorColumn#
-set statusline+=\ %y
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
-set statusline+=\ 
+"set laststatus=2
+"set statusline=
+""set statusline+=%#CursorColumn#
+""set statusline+=%#PmenuSel#
+"set statusline+=\ %{toupper(g:currentmode[mode()])}
+"set statusline+=%{StatuslineGit()}
+"set statusline+=%#LineNr#
+"set statusline+=%#192330#
+"set statusline+=%=
+""set statusline+=%#CursorColumn#
+"set statusline+=\ %y
+"set statusline+=\ %p%%
+"set statusline+=\ %l:%c
+"set statusline+=\
 
+let g:neovide_transparency=0.8
 " Default value is clap
 let g:dashboard_default_executive ='telescope'
 
@@ -76,7 +79,7 @@ highlight link LspSagaFinderSelection Search
 highlight ColorColumn ctermbg=238 guibg=238
 
 " colorscheme
-au ColorScheme * hi Normal ctermbg=none guibg=none
+au ColorScheme * hi Normal ctermbg=none guibg=#232426
 au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
 colorscheme nightfox
@@ -94,3 +97,8 @@ au BufWinEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespace /\s\+$/
 au BufWinLeave * call clearmatches()
+
+" goneovim
+let neovide_remember_window_size = v:true
+let g:neovide_cursor_animation_length=0.08
+set guifont=Iosevka:h12

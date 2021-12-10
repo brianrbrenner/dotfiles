@@ -62,3 +62,8 @@ nmap <Leader>sl :<C-u>SessionLoad<CR>
 
 " Remove all trailing whitespaces
 nnoremap <silent> <leader>rs :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+" goneovim mappings
+nnoremap <silent> <leader>sw <cmd>GonvimSidebarShow<CR>
+nnoremap <silent> <leader>nw <cmd>GonvimWorkspaceNew<CR>
+nnoremap <silent> <leader>w <cmd>GonvimWorkspaceNext<CR>

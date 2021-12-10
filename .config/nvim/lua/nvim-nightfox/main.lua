@@ -4,7 +4,7 @@ local nightfox = require('nightfox')
 -- it will be taken from the default configuration above
 nightfox.setup({
   fox = "nightfox", -- change the colorscheme to use nightfox
-  transparent = "true", 
+  transparent = "true",
   styles = {
     comments = "italic", -- change style of comments to be italic
     keywords = "bold", -- change style of keywords to be bold
@@ -15,7 +15,8 @@ nightfox.setup({
   },
   colors = {
     red = "#FF000", -- Override the red color for MAX POWER
-    bg_alt = "#000000",
+    --bg_alt = "#000000",
+    bg = "#232426"
   },
   hlgroups = {
     TSPunctDelimiter = { fg = "${red}" }, -- Override a highlight group with the color red

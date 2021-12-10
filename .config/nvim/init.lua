@@ -1,4 +1,5 @@
 vim.cmd([[
+
 call plug#begin('~/.vim/plugged')
 
 " Language
@@ -33,6 +34,7 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'ahmedkhalf/project.nvim'
 Plug 'nathom/filetype.nvim'
 Plug 'folke/trouble.nvim'
+Plug 'mfussenegger/nvim-dap'
 
 call plug#end()
 
@@ -58,8 +60,8 @@ require('nvim-trouble/main')
 require('nvim-tree/main')
 require('nvim-treesitter/main')
 require('nvim-cmp/main')
---require('nvim-lualine/main')
+require('nvim-lualine/main')
 require('nvim-bufferline/main')
---require('nvim-toggleterm/main')
+require('nvim-toggleterm/main')
 require('nvim-nightfox/main')
 
