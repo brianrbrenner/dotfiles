@@ -1,8 +1,8 @@
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
-require "user.nighfox"
---require "user.kanagawa" --use once bg color is fixed
+--require "user.nighfox"
+require "user.kanagawa" --use once bg color is fixed
 --require "user.colorscheme"
 require "user.cmp"
 require "user.lsp"
