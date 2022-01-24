@@ -34,7 +34,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: 'TamzenForPowerline'
+    family: 'Iosevka'
 
     # The `style` can be specified to pick a specific face.
     #style: SemiBold
@@ -45,7 +45,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: 'TamzenForPowerline'
+    family: 'Iosevka'
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
@@ -56,41 +56,43 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: 'TamzenForPowerline'
+    family: 'Iosevka'
 
     # The `style` can be specified to pick a specific face.
     #style: Italic
 
   # Point size
   size: 12
-colors:
-  # Default colors
-  primary:
-    background: '#232426'
-    foreground: '0xcdcecf'
-  # Normal colors
-  normal:
-    black:   '0x393b44'
-    red:     '0xc94f6d'
-    green:   '0x81b29a'
-    yellow:  '0xdbc074'
-    blue:    '0x719cd6'
-    magenta: '0x9d79d6'
-    cyan:    '0x63cdcf'
-    white:   '0xdfdfe0'
-  # Bright colors
-  bright:
-    black:   '0x475072'
-    red:     '0xd6616b'
-    green:   '0x58cd8b'
-    yellow:  '0xffe37e'
-    blue:    '0x84cee4'
-    magenta: '0xb8a1e3'
-    cyan:    '0x59f0ff'
-    white:   '0xf2f2f2'
-  indexed_colors:
-    - { index: 16, color: '0xf4a261' }
-    - { index: 17, color: '0xd67ad2' }
+
+# kanagawa
+    #colors:
+    #  # Default colors
+    #  primary:
+    #    background: '#232426'
+    #    foreground: '0xcdcecf'
+    #  # Normal colors
+    #  normal:
+    #    black:   '0x393b44'
+    #    red:     '0xc94f6d'
+    #    green:   '0x81b29a'
+    #    yellow:  '0xdbc074'
+    #    blue:    '0x719cd6'
+    #    magenta: '0x9d79d6'
+    #    cyan:    '0x63cdcf'
+    #    white:   '0xdfdfe0'
+    #  # Bright colors
+    #  bright:
+    #    black:   '0x475072'
+    #    red:     '0xd6616b'
+    #    green:   '0x58cd8b'
+    #    yellow:  '0xffe37e'
+    #    blue:    '0x84cee4'
+    #    magenta: '0xb8a1e3'
+    #    cyan:    '0x59f0ff'
+    #    white:   '0xf2f2f2'
+    #  indexed_colors:
+    #    - { index: 16, color: '0xf4a261' }
+    #    - { index: 17, color: '0xd67ad2' }
   
 # monokai
 #colors:
@@ -154,6 +156,29 @@ colors:
 #  indexed_colors:
 #    - { index: 16, color: '0xe78a4e' }
 #    - { index: 17, color: '0xc14a4a' }
+
+colors:
+    primary:
+      background: '#232426'
+      foreground: '#d3c6aa'
+    normal:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+    bright:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
 
 cursor:
   # Cursor style

@@ -1,8 +1,8 @@
 vim.cmd [[
 try
-  colorscheme kanagawa
+  let g:everforest_transparent_background = 1
+  colorscheme everforest
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
-  set background=dark
 endtry
 ]]

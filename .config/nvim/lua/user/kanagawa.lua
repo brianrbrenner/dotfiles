@@ -2,11 +2,11 @@
 require('kanagawa').setup({
     undercurl = false,           -- enable undercurls
     commentStyle = "italic",
-    functionStyle = "NONE",
-    keywordStyle = "bold",
+    functionStyle = "bold",
+    keywordStyle = "NONE",
     statementStyle = "bold",
     typeStyle = "NONE",
-    variablebuiltinStyle = "italic",
+    variablebuiltinStyle = "bold",
     specialReturn = true,       -- special highlight for the return keyword
     specialException = true,    -- special highlight for exception handling keywords 
     transparent = true,        -- do not set background color
