@@ -50,7 +50,6 @@ augroup RestoreCursorShapeOnExit
 augroup END
 ]]
 
-vim.cmd[[hi Normal ctermbg='NONE' guibg='NONE']]
 vim.cmd [[set cc=80]]
 vim.cmd [[syntax enable]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"

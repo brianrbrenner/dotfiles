@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use "rebelot/kanagawa.nvim"
   use "EdenEast/nightfox.nvim"
   use "sainnhe/everforest"
+  use "theniceboy/nvim-deus"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
