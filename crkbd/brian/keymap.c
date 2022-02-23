@@ -167,11 +167,14 @@ void render_mod_status(uint8_t modifiers) {
     oled_write_P(PSTR("G"), (modifiers & MOD_MASK_GUI));
 }
 
-#ifdef WPM_ENABLE
-static void print_logo_narrow(void) {
+void render_B_and_rust(void) {
     oled_render_B_logo();
     oled_set_cursor(0, 6);
     oled_render_rust_logo();
+}
+
+#ifdef WPM_ENABLE
+static void print_logo_narrow(void) {
     /* wpm counter */
     uint8_t n = get_current_wpm();
     char    wpm_str[4];
@@ -201,6 +204,7 @@ void render_status_main(void) {
     // Add a empty line
     oled_write_P(PSTR("-----"), false);
     render_keylogger_status();
+    print_logo_narrow();
 }
 
 bool oled_task_user(void) {
@@ -208,7 +212,7 @@ bool oled_task_user(void) {
   if (is_keyboard_master()) {
     render_status_main();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
   } else {
-    print_logo_narrow();
+    render_B_and_rust();
   }
     return false;
 }
