@@ -1,10 +1,14 @@
 #!/bin/bash
 
-pkill -f pasystray
 pkill -f blueman-applet
 pkill -f nm-applet
+pkill -f flameshot
+pkill -f pasystray
 
-pasystray --notify=all &
+nitrogen --restore &
+picom &
+#xfce4-power-manager &
+pasystray &
 blueman-applet &
 nm-applet --indicator &
-
+flameshot &
