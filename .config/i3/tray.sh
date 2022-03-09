@@ -7,7 +7,6 @@ pkill -f pasystray
 
 nitrogen --restore &
 picom &
-#xfce4-power-manager &
 pasystray &
 blueman-applet &
 nm-applet --indicator &
