@@ -14,6 +14,10 @@ super + w
 super + @space
     rofi -show drun -theme ~/.config/rofi/theme.rasi
 
+# power menu
+super + ctrl + {q,r}
+   rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu -theme ~/.config/rofi/theme.rasi
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

@@ -22,13 +22,13 @@ configuration {
   padding: 0;
   spacing: 0;
 
-  bg: #222D31;
-  bg-alt: #454948;
-  fg: #595B5B;
-  fg-alt: #16a085;
+  bg: #1D2021;
+  bg-alt: #4D453E;
+  fg: #ECE1D7;
+  fg-alt: #C1A78E;
 
   background-color: @bg;
-  text-color: @fg-alt;
+  text-color: @fg;
 }
 
 window {
