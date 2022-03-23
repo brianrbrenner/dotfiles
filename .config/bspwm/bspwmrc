@@ -1,12 +1,16 @@
 #! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-$HOME/.config/polybar/launch.sh
-picom &
+~/.config/scripts/xrandr.sh &
+~/.config/scripts/monitor.sh &
+picom --backend-glx &
 nitrogen --restore &
 pulseaudio --daemonize=no --exit-idle-time=-1 &
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'loginctl suspend' '' &
-bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10 &
+$HOME/.config/polybar/launch.sh
+
+bspc monitor eDP1 -d 1 2 3 4 &
+bspc monitor HDMI1 -d 5 6 7 8 &
 
 bspc config border_width         2
 bspc config active_border_color \#4D453E

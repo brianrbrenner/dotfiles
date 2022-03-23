@@ -11,7 +11,7 @@ while pgrep polybar -x >/dev/null; do sleep 1; done
 polybar main -c $(dirname $0)/config.ini &
 
 if [[ $(xrandr -q | grep 'HDMI1 connected') ]]; then
-	polybar external -c $(dirname $0)/config.ini &
+	polybar main_external -c $(dirname $0)/config.ini &
 fi
 
 polybar main 2> ~/polybar.log || cat ~/polybar.log
