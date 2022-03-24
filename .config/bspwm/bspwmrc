@@ -1,16 +1,9 @@
 #! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-~/.config/scripts/xrandr.sh &
-~/.config/scripts/monitor.sh &
-picom --backend-glx &
-nitrogen --restore &
-pulseaudio --daemonize=no --exit-idle-time=-1 &
-xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'loginctl suspend' '' &
-$HOME/.config/polybar/launch.sh
 
-bspc monitor eDP1 -d 1 2 3 4 &
-bspc monitor HDMI1 -d 5 6 7 8 &
+bspc monitor eDP1 -d 6 7 8 9 0 &
+bspc monitor HDMI1 -d 1 2 3 4 5 &
 
 bspc config border_width         2
 bspc config active_border_color \#4D453E
@@ -22,3 +15,12 @@ bspc config gapless_monocle      true
 
 bspc rule -a Zathura state=tiled
 
+# Autostart
+~/.config/scripts/monitor.sh &
+~/.config/scripts/xrandr.sh &
+picom --backend-glx &
+nitrogen --restore &
+brightnessctl set 50%
+pulseaudio --daemonize=no --exit-idle-time=-1 &
+xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'loginctl suspend' '' &
+$HOME/.config/polybar/launch.sh
