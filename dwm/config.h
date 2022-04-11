@@ -109,8 +109,8 @@ static const char *termcmd[]  = { "st", NULL };
 #include "./patches/shiftview.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-  { 0,            XF86XK_MonBrightnessUp,    spawn,          {.v = brupcmd} },
-  { 0,            XF86XK_MonBrightnessDown,  spawn,          {.v = brdowncmd} },
+    { 0,            XF86XK_MonBrightnessUp,    spawn,          {.v = brupcmd} },
+    { 0,            XF86XK_MonBrightnessDown,  spawn,          {.v = brdowncmd} },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,			                  XK_b,      spawn,		   SHCMD("feh --bg-fill --randomize ~/Pictures/Wallpapers/gruvbox* &") },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
@@ -123,7 +123,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_q,      killclient,     {0} },
+	{ MODKEY|ShiftMask,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_space,  spawn,          SHCMD("dmenu_run") },
 	{ MODKEY|ShiftMask,             XK_space,      setlayout,      {0} }, 
 	{ MODKEY,			                  XK_w,      spawn,		   SHCMD("$BROWSER") },
