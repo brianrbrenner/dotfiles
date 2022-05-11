@@ -6,7 +6,7 @@ end
 lualine.setup {
   options = {
     icons_enabled = false,
-    theme = 'auto',
+    theme = 'everforest',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},

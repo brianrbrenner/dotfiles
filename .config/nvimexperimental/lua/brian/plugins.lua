@@ -20,6 +20,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
   -- Appearance
   use 'kyazdani42/nvim-web-devicons'
@@ -27,6 +31,7 @@ return require('packer').startup(function(use)
   use 'lunarvim/colorschemes'
   use 'nvim-lualine/lualine.nvim'
   use 'sainnhe/everforest'
+  use 'sainnhe/gruvbox-material'
 
   -- function
   use 'nvim-telescope/telescope.nvim'
