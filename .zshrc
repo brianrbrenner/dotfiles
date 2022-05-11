@@ -4,10 +4,10 @@
 autoload -Uz vcs_info
 autoload -U colors && colors
 
-# enable only git
-zstyle ':vcs_info:*' enable git
+# enable only git 
+zstyle ':vcs_info:*' enable git 
 
-# setup a hook that runs before every ptompt.
+# setup a hook that runs before every ptompt. 
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
@@ -15,7 +15,7 @@ setopt prompt_subst
 # add a function to check for untracked files in the directory.
 # from https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-#
+# 
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then
@@ -40,15 +40,12 @@ PROMPT+="\$vcs_info_msg_0_ "
 source /home/$USER/.config/zshplugs/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /home/$USER/.config/zshplugs/zsh-completions/zsh-completions.plugin.zsh
 source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /home/$USER/.config/zshplugs/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Applications
-export TERMINAL=/bin/alacritty
+export TERMINAL=/usr/local/bin/st
 export PATH=/usr/local/share/npm/bin:$PATH
-export BROWSER=/bin/firefox
-
-# aliases
-alias xbq="sudo xbps-query -Rs"
-alias xbi="sudo xbps-query -S"
+export PATH="$HOME/.local/bin:$PATH"
 
 # rx used to fzf in terminal
 function displayhelp() {
@@ -80,9 +77,3 @@ function rx() {
       cd "$(dirname $folder)" ;;
   esac; }
 
-# Adapted from https://unix.stackexchange.com/a/113768/347104
-if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
-  # Adapted from https://unix.stackexchange.com/a/176885/347104
-  # Create session 'main' or attach to 'main' if already exists.
-  tmux new-session -A -s main
-fi
