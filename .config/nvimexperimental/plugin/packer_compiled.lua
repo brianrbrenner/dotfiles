@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -122,7 +127,7 @@ _G.packer_plugins = {
   ["nvim-bufbar"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-bufbar",
-    url = "https://github.com/ojroques/nvim-bufbar"
+    url = "https://github.com/brianrbrenner/nvim-bufbar"
   },
   ["nvim-cmp"] = {
     loaded = true,

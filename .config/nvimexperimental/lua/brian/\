@@ -32,8 +32,6 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'sainnhe/everforest'
   use 'sainnhe/gruvbox-material'
-  use { "ellisonleao/gruvbox.nvim" }
-  use {'brianrbrenner/nvim-bufbar'}
 
   -- function
   use 'nvim-telescope/telescope.nvim'
@@ -42,5 +40,6 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
   use 'ethanholz/nvim-lastplace'
   use 'BurntSushi/ripgrep'
+  use {'ojroques/nvim-bufbar'}
 
   end)
