@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
   use 'lunarvim/colorschemes'
   use 'nvim-lualine/lualine.nvim'
+  use 'sainnhe/everforest'
 
   -- function
   use 'nvim-telescope/telescope.nvim'
