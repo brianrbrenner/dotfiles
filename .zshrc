@@ -1,13 +1,16 @@
 #!/bin/sh
 
+## reattach tmux
+if [ "$TMUX" = "" ]; then tmux; fi
+
 ## autoload vcs and colors
 autoload -Uz vcs_info
 autoload -U colors && colors
 
-# enable only git 
-zstyle ':vcs_info:*' enable git 
+# enable only git
+zstyle ':vcs_info:*' enable git
 
-# setup a hook that runs before every ptompt. 
+# setup a hook that runs before every ptompt.
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
@@ -15,7 +18,7 @@ setopt prompt_subst
 # add a function to check for untracked files in the directory.
 # from https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-# 
+#
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then
@@ -43,9 +46,21 @@ source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlig
 source /home/$USER/.config/zshplugs/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Applications
-export TERMINAL=/usr/local/bin/st
+export TERMINAL=/bin/alacritty
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH="$HOME/.local/bin:$PATH"
+export PATH=/home/brian/.local/bin:$PATH
+export BROWSER=/bin/chromium
+export EDITOR=/bin/nvim
+
+# aliases
+alias xbq="sudo xbps-query -Rs"
+alias xbi="sudo xbps-install -S"
+alias xbu="sudo xbps-install -Su"
+alias nv="nvim"
+alias ls='ls --color'
+alias gc='git commit -m'
+alias ga='git add'
+alias gp='git push origin'
 
 # rx used to fzf in terminal
 function displayhelp() {
@@ -77,3 +92,7 @@ function rx() {
       cd "$(dirname $folder)" ;;
   esac; }
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
