@@ -23,6 +23,7 @@ set undofile                                    " store undo info in a file
 set sidescrolloff=7                             " keep 7 characters visible to the left/right of the cursor when scrolling
 set sidescroll=1                                " scroll left/right one character at a time
 set splitbelow splitright                       " put new windows below or to the right
+set noundofile
 set t_Co=256
 set encoding=utf-8
 set splitright
@@ -57,6 +58,7 @@ Plug 'dense-analysis/ale'
 Plug 'airblade/vim-rooter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'bfrg/vim-cpp-modern'
+Plug 'ap/vim-buftabline'
 call plug#end()
 
 colorscheme gruvbox
@@ -179,3 +181,14 @@ let g:cpp_member_highlight = 1
 " Put all standard C and C++ keywords under Vim's highlight group 'Statement'
 " (affects both C and C++ files)
 let g:cpp_simple_highlight = 1
+
+" bufferline
+" show in statusline
+"let g:bufferline_echo = 0
+"autocmd VimEnter *
+"\ let &statusline='%{bufferline#refresh_status()}'
+"  \ .bufferline#get_status_string()
+
+" for semanticTokens -> 
+    "semanticTokens.filetypes": ["*"],
+    "inside coc-settings
