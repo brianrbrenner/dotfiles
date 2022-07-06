@@ -1,0 +1,11 @@
+{
+    "languageserver": {
+        "clangd": {
+            "command": "clangd",
+            "filetypes": ["c", "cpp", "h", "hpp", "objc", "objcpp"],
+            "initializationOptions": {
+                "coc.preferences.semanticTokensHighlights": false
+            }
+        }
+    }
+}
