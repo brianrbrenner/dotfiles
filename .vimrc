@@ -1,5 +1,7 @@
 syntax on
 set clipboard=unnamedplus
+set list
+set listchars=tab:>-,eol:¬,space:⋅
 set whichwrap+=<,>,[,],h,l
 set iskeyword+=-
 set nohlsearch
@@ -32,10 +34,6 @@ set number
 set relativenumber
 set cursorline
 set mouse=a
-
-" indentation
-set listchars=tab:\|\ 
-set list
 
 " reset cursor
 augroup RestoreCursorShapeOnExit                                                                    
