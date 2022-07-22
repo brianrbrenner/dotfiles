@@ -46,7 +46,7 @@ source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlig
 source /home/$USER/.config/zshplugs/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Applications
-export TERMINAL=/bin/alacritty
+export TERMINAL=/bin/kitty
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/home/brian/.local/bin:$PATH
 export BROWSER=/bin/chromium
@@ -58,9 +58,12 @@ alias xbi="sudo xbps-install -S"
 alias xbu="sudo xbps-install -Su"
 alias nv="nvim"
 alias ls='ls --color'
-alias gc='git commit -m'
+alias gcm='git commit -m'
+alias gc='git checkout'
 alias ga='git add'
 alias gp='git push origin'
+# original vim
+alias vim='vim-normal'
 
 # rx used to fzf in terminal
 function displayhelp() {

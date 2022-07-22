@@ -1,7 +1,5 @@
 syntax on
 set clipboard=unnamedplus
-set list
-set listchars=tab:>-,eol:¬,space:⋅
 set whichwrap+=<,>,[,],h,l
 set iskeyword+=-
 set nohlsearch
@@ -10,9 +8,9 @@ set noswapfile
 set cmdheight=1
 set laststatus=2
 set termguicolors
-set shiftwidth=4                                " number of spaces to use for indenting
-set softtabstop=4                               " number of spaces to use when inserting a tab
-set tabstop=4                                   " show tabs as 2 spaces
+set shiftwidth=2                                " number of spaces to use for indenting
+set softtabstop=2                               " number of spaces to use when inserting a tab
+set tabstop=2                                   " show tabs as 2 spaces
 set expandtab                                   " convert tabs into spaces
 set autoindent                                  " copy indent from previous line
 set nowrap                                      " don't wrap long lines
@@ -57,9 +55,20 @@ Plug 'airblade/vim-rooter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'ap/vim-buftabline'
+Plug 'cocopon/iceberg.vim'
 call plug#end()
 
-colorscheme gruvbox
+set list
+set encoding=utf-8
+scriptencoding utf-8
+
+set listchars=tab:->,trail:~,extends:>,precedes:<,space:·
+set list
+colorscheme iceberg
+hi Whitespace guifg=#505050
+hi NonText guifg=#505050
+
+"colorscheme gruvbox
 set background=dark
 
 " Use a line cursor within insert mode and a block cursor everywhere else.
