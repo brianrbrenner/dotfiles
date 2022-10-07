@@ -1,7 +1,9 @@
-require("ag.plugins") -- load my lua configs
-require("ag.mappings") -- load my lua configs
-require("ag.autocmd") -- load my lua configs
-require("ag.lsp_config") -- load my lua configs
-require("ag.mason_lsp") -- load my lua configs
-require("ag.treesitter") -- load my lua configs
-require("ag.options") -- load my lua configs
+local status_ok, impatient = pcall(require, "impatient")
+if status_ok then
+  impatient.enable_profile()
+end
+
+require "user.core"
+require "user.colorscheme"
+require "user.highlights"
+require "user.plugins"
