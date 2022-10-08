@@ -90,6 +90,8 @@ local plugins = {
 
   ["folke/tokyonight.nvim"] = {}, -- Colorscheme
 
+  ["ellisonleao/gruvbox.nvim"] = {},
+
   -- ["Lunarvim/onedarker.nvim"] = {
   --   branch = "freeze",
   -- },

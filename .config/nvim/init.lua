@@ -4,6 +4,6 @@ if status_ok then
 end
 
 require "user.core"
-require "user.colorscheme"
 require "user.highlights"
 require "user.plugins"
+require "user.colorscheme"

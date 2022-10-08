@@ -1,7 +1,7 @@
-local name = "tokyonight"
+local name = "gruvbox"
 
 -- Check for colorscheme configuration, if available or not
-pcall(require, "set.colorscheme.config." ..name)
+pcall(require, "user.colorscheme.config." ..name)
 
 -- Check if the colorscheme is found
 local colorscheme_status_ok, _ = pcall(vim.cmd, "colorscheme " .. name)

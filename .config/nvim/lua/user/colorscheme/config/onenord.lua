@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 onenord.setup {
-  theme = dark, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+  theme = nil, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
   borders = true, -- Split window borders
   fade_nc = false, -- Fade non-current windows, making them more distinguishable
   -- Style that is applied to various groups: see `highlight-args` for options
