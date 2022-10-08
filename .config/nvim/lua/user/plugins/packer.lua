@@ -130,6 +130,8 @@ local plugins = {
 
   ["hrsh7th/cmp-nvim-lua"] = {}, -- lua completions
 
+  ["ggandor/leap.nvim"] = {}, -- sneak
+
   -- Snippets
   ["L3MON4D3/LuaSnip"] = {}, --snippet engine
 
