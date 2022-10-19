@@ -11,7 +11,8 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-  disable_netrw = false,
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
   auto_reload_on_write = true,
   ignore_ft_on_setup = {
     "startify",
@@ -26,11 +27,6 @@ nvim_tree.setup {
       warning = "",
       error = "",
     },
-  },
-  update_focused_file = {
-    enable = true,
-    update_cwd = true,
-    ignore_list = {},
   },
   renderer = {
     icons = {
