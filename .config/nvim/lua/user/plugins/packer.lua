@@ -88,10 +88,12 @@ local plugins = {
 
   ["lukas-reineke/indent-blankline.nvim"] = {}, -- Indent Guide
 
-  ["folke/tokyonight.nvim"] = {}, -- Colorscheme
+  -- Colorscheme
+  ["folke/tokyonight.nvim"] = {},
 
   ["ellisonleao/gruvbox.nvim"] = {},
 
+  ["Yazeed1s/oh-lucy.nvim"] = {},
   -- ["Lunarvim/onedarker.nvim"] = {
   --   branch = "freeze",
   -- },
@@ -153,7 +155,7 @@ local plugins = {
   -- Telescope
   ["nvim-telescope/telescope.nvim"] = {}, -- FZF
 
-  -- Projects 
+  -- Projects
   ["ahmedkhalf/project.nvim"] = {
     requires = { "neovim/nvim-lspconfig" },
     config = function()
