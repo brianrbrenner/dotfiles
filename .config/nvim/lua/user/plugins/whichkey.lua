@@ -86,11 +86,13 @@ end
 
 local mappings = {
   ["a"] = { toggleAlpha, "Alpha" },
+  ["b"] = {":BufferLinePick<CR>", "Pick buffer"},
+  ["B"] = {":Telescope buffers<CR>", "Pick buffer from list"},
   ["r"] = { ":%d+<cr>", "Remove All Text" },
   ["y"] = { ":%y+<cr>", "Yank All Text" },
   ["e"] = { ":NvimTreeToggle<cr>", "Explorer" },
   ["q"] = { ":qa!<cr>", "Exit" },
-  ["c"] = { ":Bdelete!<cr>", "Close Buffer" },
+  ["Q"] = { ":Bdelete!<cr>", "Close Buffer" },
   ["f"] = {
     ":lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",

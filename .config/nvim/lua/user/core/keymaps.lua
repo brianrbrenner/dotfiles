@@ -42,7 +42,8 @@ local keymaps = {
     -- Move Next Window
     ["<Leader>w"] = "<C-w>w",
     -- Close Window
-    ["Q"] = close,
+    -- ["Q"] = close,
+
     -- Resize with arrows
     ["<C-Up>"] = ":resize +2<CR>",
     ["<C-Down>"] = ":resize -2<CR>",
@@ -92,6 +93,10 @@ local keymaps = {
     ["<A-j>"] = ":m '>+1<CR>gv=gv",
     ["<A-k>"] = ":m '<-2<CR>gv=gv",
   },
+
+  -- buffers
+  ["<leader>b"] = ":BufferLinePick<CR>",
+  ["<leader>B"] = ":Telescope buffers<CR>",
   command_mode = {
    -- Word Search Increment and Decrement
     ["<Tab>"] = forward_search,
