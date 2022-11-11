@@ -153,6 +153,19 @@ local plugins = {
   -- Telescope
   ["nvim-telescope/telescope.nvim"] = {}, -- FZF
 
+  -- Projects 
+  ["ahmedkhalf/project.nvim"] = {
+    requires = { "neovim/nvim-lspconfig" },
+    config = function()
+      require("project_nvim").setup {
+        manual_mode = false,
+        detection_methods = { "lsp", "pattern" },
+        silent_chdir = true,
+        show_hidden = true,
+      }
+    end,
+  },
+
   -- Treesitter
   ["nvim-treesitter/nvim-treesitter"] = {
     run = ":TSUpdate",
