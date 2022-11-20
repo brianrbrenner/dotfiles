@@ -76,7 +76,7 @@ for k, v in pairs(global) do
 end
 
 if vim.fn.exists "g:neovide" == 1 then
-  vim.opt.guifont = "JetBrainsMono NF:h11"
+  vim.opt.guifont = "JetBrainsMono Nerd Font:h8"
   vim.g.remember_window_size = true
   vim.g.remember_window_position = true
   local function toggleTransparency()

@@ -1,0 +1,1 @@
+/home/brian/.config/emacs/straight/repos/evil-collection/modes/arc-mode/evil-collection-arc-mode.el

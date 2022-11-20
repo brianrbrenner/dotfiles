@@ -1,0 +1,1 @@
+/home/brian/.config/emacs/straight/repos/swiper/elpa.el

@@ -1,0 +1,1 @@
+/home/brian/.config/emacs/straight/repos/evil-collection/modes/ediff/evil-collection-ediff.el

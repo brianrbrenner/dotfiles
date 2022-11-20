@@ -1,0 +1,1 @@
+/home/brian/.config/emacs/straight/repos/evil-collection/modes/thread/evil-collection-thread.el

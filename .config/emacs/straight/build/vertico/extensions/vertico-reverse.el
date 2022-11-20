@@ -1,0 +1,1 @@
+/home/brian/.config/emacs/straight/repos/vertico/extensions/vertico-reverse.el

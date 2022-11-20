@@ -1,0 +1,7 @@
+cd
+cd projects/cs44001/lab11/
+ls
+clang++ m1.cpp 
+a.out 
+./a.out 
+quit

@@ -1,0 +1,1 @@
+/home/brian/.config/emacs/straight/repos/evil-collection/modes/lua-mode/evil-collection-lua-mode.el

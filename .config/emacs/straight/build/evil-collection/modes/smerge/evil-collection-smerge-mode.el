@@ -1,0 +1,1 @@
+/home/brian/.config/emacs/straight/repos/evil-collection/modes/smerge/evil-collection-smerge-mode.el

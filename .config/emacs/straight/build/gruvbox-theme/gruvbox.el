@@ -1,0 +1,1 @@
+/home/brian/.config/emacs/straight/repos/emacs-theme-gruvbox/gruvbox.el
