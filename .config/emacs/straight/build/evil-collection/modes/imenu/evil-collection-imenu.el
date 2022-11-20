@@ -1,1 +1,0 @@
-/home/brian/.config/emacs/straight/repos/evil-collection/modes/imenu/evil-collection-imenu.el

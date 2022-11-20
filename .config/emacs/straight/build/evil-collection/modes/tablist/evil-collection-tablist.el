@@ -1,1 +1,0 @@
-/home/brian/.config/emacs/straight/repos/evil-collection/modes/tablist/evil-collection-tablist.el

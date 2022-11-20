@@ -1,1 +1,0 @@
-/home/brian/.config/emacs/straight/repos/evil-collection/modes/bluetooth/evil-collection-bluetooth.el

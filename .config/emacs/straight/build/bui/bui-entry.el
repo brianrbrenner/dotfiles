@@ -1,1 +1,0 @@
-/home/brian/.config/emacs/straight/repos/bui.el/bui-entry.el

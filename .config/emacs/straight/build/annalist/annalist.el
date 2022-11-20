@@ -1,1 +1,0 @@
-/home/brian/.config/emacs/straight/repos/annalist.el/annalist.el

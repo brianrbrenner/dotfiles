@@ -1,1 +1,0 @@
-/home/brian/.config/emacs/straight/repos/vertico/extensions/vertico-mouse.el

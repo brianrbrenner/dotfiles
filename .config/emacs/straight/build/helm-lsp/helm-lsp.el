@@ -1,1 +1,0 @@
-/home/brian/.config/emacs/straight/repos/helm-lsp/helm-lsp.el
