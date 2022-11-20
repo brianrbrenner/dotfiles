@@ -26,11 +26,8 @@
 (setq-default tab-width 2)
 (setq-default evil-shift-width tab-width)
 
-
 ;; backups
-(setq make-backup-files nil)
 (setq backup-directory-alist `(("." . "~/.saves")))
-
 
 ;; find recent files M-x open-file
 (recentf-mode 1)
@@ -97,6 +94,10 @@
 
 
 (company-mode 1)
+
+(use-package vterm
+	:straight t
+  :ensure t)
 
 ;; evil
 (use-package evil
@@ -246,6 +247,25 @@ folder, otherwise delete a word"
 (setq lsp-enable-semantic-highlighting t)
 (setq lsp-enable-on-type-formatting t)
 
+;; Projectile
+(use-package projectile
+	:straight t
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  ;; NOTE: Set this to the folder where you keep your Git repos!
+  (when (file-directory-p "~/projects/")
+    (setq projectile-project-search-path '("~/projects/")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
+(use-package counsel-projectile
+	:straight t
+  :after projectile
+  :config (counsel-projectile-mode))
+
 ;; general leaders
 (use-package general
   :straight t
@@ -293,35 +313,31 @@ folder, otherwise delete a word"
 (use-package diminish :straight t)
 (use-package smart-mode-line
   :straight t
-  :disabled
-  :if dw/is-termux
   :config
   (setq sml/no-confirm-load-theme t)
   (sml/setup)
   (sml/apply-theme 'respectful)  ; Respect the theme colors
   (setq sml/mode-width 'right
       sml/name-width 60)
-
-  (setq-default mode-line-format
-  `("%e"
-      ,(when dw/exwm-enabled
-          '(:eval (format "[%d] " exwm-workspace-current-index)))
-      mode-line-front-space
-      evil-mode-line-tag
-      mode-line-mule-info
-      mode-line-client
-      mode-line-modified
-      mode-line-remote
-      mode-line-frame-identification
-      mode-line-buffer-identification
-      sml/pos-id-separator
-      (vc-mode vc-mode)
-      " "
-      ;mode-line-position
-      sml/pre-modes-separator
-      mode-line-modes
-      " "
-      mode-line-misc-info))
+	
+	(setq-default mode-line-format
+		`("%e",
+				mode-line-front-space
+				evil-mode-line-tag
+				mode-line-mule-info
+				mode-line-client
+				mode-line-modified
+				mode-line-remote
+				mode-line-frame-identification
+				mode-line-buffer-identification
+				sml/pos-id-separator
+				(vc-mode vc-mode)
+				" "
+				;mode-line-position
+				sml/pre-modes-separator
+				mode-line-modes
+				" "
+				mode-line-misc-info))
 
   (setq rm-excluded-modes
     (mapconcat
@@ -331,7 +347,6 @@ folder, otherwise delete a word"
       " Helm" " Undo-Tree" " Projectile.*" " Z" " Ind"
       " Org-Agenda.*" " ElDoc" " SP/s" " cider.*")
       "\\|")))
-
 
 ;; You must run (all-the-icons-install-fonts) one time after
 ;; installing this package!
