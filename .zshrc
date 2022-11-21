@@ -1,7 +1,11 @@
 #!/bin/sh
 
 ## reattach tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ -z "$TMUX" ]
+then
+    tmux attach -t MAIN || tmux new -s MAIN
+fi
+
 
 ## autoload vcs and colors
 autoload -Uz vcs_info

@@ -3,7 +3,7 @@
       use-dialog-box nil
       cua-mode t
       inhibit-startup-message t)
-(blink-cursor-mode 0)
+(blink-cursor-mode 1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
@@ -27,7 +27,10 @@
 (setq-default evil-shift-width tab-width)
 
 ;; backups
-(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-directory-alist
+			`((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+			`((".*" ,temporary-file-directory t)))
 
 ;; find recent files M-x open-file
 (recentf-mode 1)
@@ -46,7 +49,8 @@
 ;; font
 (defvar efs/default-font-size 200)
 (defvar efs/default-variable-font-size 200)
-(add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font" ))
+;; (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font" ))
+(add-to-list 'default-frame-alist '(font . "Iosevka Term" ))
 
 ;; straight pack-man
 (defvar bootstrap-version)
@@ -67,7 +71,6 @@
 
 (straight-use-package 'use-package)
 (straight-use-package 'org)
-(straight-use-package 'company)
 (straight-use-package 'key-chord)
 (straight-use-package 'flycheck-projectile)
 
@@ -93,7 +96,57 @@
 ;;(setq modus-themes-completions 'minimal)
 ;;(load-theme 'modus-vivendi t)
 
-(company-mode 1)
+;; spaceway theme
+(use-package spaceway-theme
+  :ensure nil
+  :straight (:type built-in)
+  :load-path "themes/spaceway/"
+  :config
+  (global-hl-line-mode t)
+  (set-cursor-color "#dc322f")
+  (load-theme 'spaceway t))
+
+(global-hl-line-mode t)
+(customize-set-value 'modus-themes-org-blocks 'gray-background
+                    "Color background of code blocks gray.")
+(add-to-list 'default-frame-alist '(cursor-color . "magenta"))
+
+;; corfu (completions)
+(use-package corfu
+	:straight t
+  ;; Optional customizations
+  :custom
+  (corfu-cycle t)                 ; Allows cycling through candidates
+  (corfu-auto t)                  ; Enable auto completion
+  (corfu-auto-prefix 2)
+  (corfu-auto-delay 0.0)
+  (corfu-echo-documentation 0.25) ; Enable documentation for completions
+  (corfu-preview-current 'insert) ; Do not preview current candidate
+  (corfu-preselect-first nil)
+  (corfu-on-exact-match nil)      ; Don't auto expand tempel snippets
+
+  ;; Optionally use TAB for cycling, default is `corfu-complete'.
+  :bind (:map corfu-map
+              ("M-SPC" . corfu-insert-separator) ;; orderless find
+              ("TAB"     . corfu-next)
+              ([tab]     . corfu-next)
+              ("S-TAB"   . corfu-previous)
+              ([backtab] . corfu-previous)
+              ("S-<return>" . corfu-insert)
+              ("RET"     . nil) ;; leave my enter alone!
+              )
+
+  :init
+  (global-corfu-mode)
+  ;;(corfu-history-mode)
+  :config
+  (setq tab-always-indent 'complete)
+  (add-hook 'eshell-mode-hook
+            (lambda () (setq-local corfu-quit-at-boundary t
+                              corfu-quit-no-match t
+                              corfu-auto nil)
+              (corfu-mode))))
+
 
 (use-package org-contrib
 	:straight t
@@ -220,45 +273,31 @@ folder, otherwise delete a word"
   )
   (setq persp-suppress-no-prefix-key-warn t)
 
-;; lsp
-(use-package lsp-mode
-    :straight t
-    :init
-    ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-    (setq lsp-keymap-prefix "C-c l")
-    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-	    (c++-mode . lsp)
-	    (c-mode . lsp)
-	    (js-mode . lsp)
-	    ;; if you want which-key integration
-	    (lsp-mode . lsp-enable-which-key-integration))
-    :commands lsp)
+;; treesitter
+(use-package tree-sitter
+	:straight t
+  :ensure t
+  :config
+  ;; activate tree-sitter on any buffer containing code for which it has a parser available
+  (global-tree-sitter-mode)
+  ;; you can easily see the difference tree-sitter-hl-mode makes for python, ts or tsx
+  ;; by switching on and off
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(use-package tree-sitter-langs
+	:straight t
+  :ensure t
+  :after tree-sitter)
+
+(use-package eglot
+	:straight t
+	:ensure t)
+
 ;; optional if you want which-key integration
 (use-package which-key
   :straight t
   :config
   (which-key-mode))
-
-(setq lsp-log-io nil) ; if set to true can cause a performance hit
-
-;; optionally
-(use-package lsp-ui :commands lsp-ui-mode :straight t)
-;; if you are helm user
-;; (use-package helm-lsp :commands helm-lsp-workspace-symbol :straight t)
-;; if you are ivy user
-(use-package lsp-ivy :commands lsp-ivy-workspace-symbol :straight t)
-(use-package lsp-treemacs :after lsp :commands lsp-treemacs-errors-list :straight t)
-
-;; optionally if you want to use debugger
-;;(use-package dap-mode :straight t)
-;;(use-package dap-cpptools :straight t) ;to load the dap adapter for your language
-
-;; lsp opts
-(setq lsp-modeline-diagnostics-enable t)
-(setq lsp-headerline-breadcrumb-enable t)
-(setq lsp-enable-completion-at-point t)
-(setq lsp-enable-semantic-highlighting t)
-(setq lsp-enable-on-type-formatting t)
 
 ;; Projectile
 (use-package projectile
@@ -507,8 +546,15 @@ folder, otherwise delete a word"
   :config
   (ivy-prescient-mode 1))
 
-;; nvim like telescope find
+;; nvim like
 (dw/leader-key-def
+	"b"   '(switch-to-buffer :which-key "switch to buf")
+	"ca"  '(eglot-code-action-inline :which-key "code actions")
+	"lf"  '(eglot-format-buffer :which-key "format buffer")
+	"ln"  '(flymake-goto-next-error :which-key "next diagnostic")
+	"lp"  '(flymake-goto-prev-error :which-key "prev diagnostic")
+	"gd"  '(evil-goto-definition :which-key "goto definition")
+	"gD"  '(eglot-find-declaration :which-key "goto definition")
   "r"   '(ivy-resume :which-key "ivy resume")
   "f"   '(:ignore t :which-key "files")
   "ff"  '(counsel-find-file :which-key "open file")
