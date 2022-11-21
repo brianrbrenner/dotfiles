@@ -62,10 +62,11 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-(setq package-enable-at-startup nil)
 (setq straight-use-package-by-default t)
+(setq package-enable-at-startup nil)
 
 (straight-use-package 'use-package)
+(straight-use-package 'org)
 (straight-use-package 'company)
 (straight-use-package 'key-chord)
 (straight-use-package 'flycheck-projectile)
@@ -92,8 +93,11 @@
 ;;(setq modus-themes-completions 'minimal)
 ;;(load-theme 'modus-vivendi t)
 
-
 (company-mode 1)
+
+(use-package org-contrib
+	:straight t
+  :after org)
 
 (use-package vterm
 	:straight t
@@ -125,6 +129,15 @@
   :ensure t
   :config
   (evil-collection-init))
+
+(use-package undo-tree
+	:straight t
+  :ensure t
+  :after evil
+  :diminish
+  :config
+  (evil-set-undo-system 'undo-tree)
+  (global-undo-tree-mode 1))
 
 (use-package evil-nerd-commenter
 	:straight t
@@ -350,9 +363,9 @@ folder, otherwise delete a word"
 
 ;; You must run (all-the-icons-install-fonts) one time after
 ;; installing this package!
-(use-package minions
-  :straight t
-  :hook (doom-modeline-mode . minions-mode))
+(use-package all-the-icons
+	:straight t
+  :if (display-graphic-p))
 
 (use-package doom-modeline
   :straight t
@@ -372,6 +385,10 @@ folder, otherwise delete a word"
   (doom-modeline-persp-name nil)
   (doom-modeline-buffer-file-name-style 'truncate-except-project)
   (doom-modeline-major-mode-icon nil))
+
+(use-package minions
+  :straight t
+  :hook (doom-modeline-mode . minions-mode))
 
 ;; IVY
 (use-package ivy
@@ -526,3 +543,17 @@ folder, otherwise delete a word"
   "ot"  '(org-todo-list :which-key "todos")
   "oc"  '(org-capture t :which-key "capture")
   "ox"  '(org-export-dispatch t :which-key "export"))
+
+;; magit
+(use-package magit
+	:straight t
+  :commands magit-status
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
+;; NOTE: Make sure to configure a GitHub token before using this package!
+;; - https://magit.vc/manual/forge/Token-Creation.html#Token-Creation
+;; - https://magit.vc/manual/ghub/Getting-Started.html#Getting-Started
+(use-package forge
+	:straight t
+  :after magit)
