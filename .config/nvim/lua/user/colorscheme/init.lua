@@ -1,4 +1,4 @@
-local name = "oh-lucy"
+local name = "oh-lucy-evening"
 
 -- Check for colorscheme configuration, if available or not
 pcall(require, "user.colorscheme.config." ..name)
