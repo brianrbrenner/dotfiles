@@ -51,7 +51,7 @@ autocmd("BufEnter", {
 })
 
 autocmd("FileType", {
-  pattern = { "c", "cpp", "py", "java", "cs" },
+  pattern = { "py", "java", "cs" },
   callback = function()
     vim.bo.shiftwidth = 4
   end,
