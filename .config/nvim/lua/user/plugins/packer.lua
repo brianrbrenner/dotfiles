@@ -142,6 +142,8 @@ local plugins = {
   ---LSP
   ["neovim/nvim-lspconfig"] = {}, -- enable LSP
 
+  ["ray-x/lsp_signature.nvim"] = {},
+
   ["jose-elias-alvarez/null-ls.nvim"] = {}, -- for formatters and linters
 
   ["RRethy/vim-illuminate"] = {}, -- LSP Highlight
