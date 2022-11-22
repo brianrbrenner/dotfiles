@@ -186,7 +186,7 @@ local lsp = {
   end,
   -- icon = " :",
   color = { fg = C.fg, gui = "", bg = C.bg },
-  separator = { left = "", right = "" },
+  separator = { right = "" },
 }
 
 -- cool function for progress
@@ -242,7 +242,7 @@ lualine.setup {
   sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = { branch, mode, diagnostics, "%=", lsp },
+    lualine_c = { branch, mode, diagnostics, lsp },
     lualine_x = { diff, filetype, spaces, filesize, percent, progress },
     lualine_y = {},
     lualine_z = {},
