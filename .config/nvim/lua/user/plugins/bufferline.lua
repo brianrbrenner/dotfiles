@@ -24,7 +24,7 @@ bufferline.setup {
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
     tab_size = 18,
   },
-  highlights = {
+  --[[ highlights = {
     buffer_selected = {
       bold = false,
       italic = false,
@@ -33,5 +33,6 @@ bufferline.setup {
       bold = false,
       italic = false,
     },
-  },
+  }, ]]
+  highlights = require("ofirkai.tablines.bufferline").highlights,
 }

@@ -1,4 +1,4 @@
-local name = "kanagawa"
+local name = "ofrikai"
 
 -- Check for colorscheme configuration, if available or not
 pcall(require, "user.colorscheme.config." ..name)

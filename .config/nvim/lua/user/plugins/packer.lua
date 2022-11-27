@@ -104,6 +104,7 @@ local plugins = {
 
   ["rebelot/kanagawa.nvim"] = {},
 
+  ["ofirgall/ofirkai.nvim"] = {},
   -- ["projekt0n/github-nvim-theme"] = {},
 
   -- ["Mofiqul/vscode.nvim"] = {},
