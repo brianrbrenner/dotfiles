@@ -1,4 +1,4 @@
-local name = "ofrikai"
+local name = "gruvbox"
 
 -- Check for colorscheme configuration, if available or not
 pcall(require, "user.colorscheme.config." ..name)

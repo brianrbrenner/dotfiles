@@ -156,6 +156,8 @@ local plugins = {
 
   ["williamboman/mason-lspconfig.nvim"] = {}, -- LSP Configuration
 
+  ["SmiteshP/nvim-navic"] = {},
+
   -- Telescope
   ["nvim-telescope/telescope.nvim"] = {}, -- FZF
 

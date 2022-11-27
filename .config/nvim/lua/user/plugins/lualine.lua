@@ -9,7 +9,6 @@ end
 
 local null_ls = require "user.plugins.lsp.null-ls"
 local C = require "user.highlights.palette"
-local ofirkai_lualine = require "ofirkai.statuslines.lualine"
 
 local mode_names = {
   ["n"] = "NORMAL",
@@ -227,8 +226,7 @@ lualine.setup {
   options = {
     globalstatus = true,
     icons_enabled = true,
-    -- theme = "auto",
-    theme = ofirkai_lualine.theme,
+    theme = "auto",
     disabled_filetypes = {
       "dashboard",
       "lspinfo",
