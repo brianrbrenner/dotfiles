@@ -98,11 +98,11 @@ local plugins = {
   --   branch = "freeze",
   -- },
 
-  -- ["navarasu/onedark.nvim"] = {},
+  ["navarasu/onedark.nvim"] = {},
 
-  -- ["rmehri01/onenord.nvim"] = {},
+  ["rmehri01/onenord.nvim"] = {},
 
-  -- ["rebelot/kanagawa.nvim"] = {},
+  ["rebelot/kanagawa.nvim"] = {},
 
   -- ["projekt0n/github-nvim-theme"] = {},
 
@@ -110,11 +110,12 @@ local plugins = {
 
   -- ["catppuccin/nvim"] = {},
 
+  ["sam4llis/nvim-tundra"] = {},
 
   ["iamcco/markdown-preview.nvim"] = {
     run = function()
       vim.fn["mkdp#util#install"]()
-    end
+    end,
   }, --Markdown Preview
 
   ["is0n/jaq-nvim"] = {}, -- Code Runner
