@@ -86,7 +86,7 @@ local plugins = {
 
   ["akinsho/toggleterm.nvim"] = {}, -- Terminal
 
-  ["lukas-reineke/indent-blankline.nvim"] = {}, -- Indent Guide
+  -- ["lukas-reineke/indent-blankline.nvim"] = {}, -- Indent Guide
 
   -- Colorscheme
   ["folke/tokyonight.nvim"] = {},
