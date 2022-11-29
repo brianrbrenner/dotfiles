@@ -91,6 +91,9 @@ local plugins = {
   -- Colorscheme
   ["folke/tokyonight.nvim"] = {},
 
+  ["rktjmp/lush.nvim"] = {},
+  ["brianrbrenner/nvim-jellybeans"] = {},
+
   ["ellisonleao/gruvbox.nvim"] = {},
 
   ["Yazeed1s/oh-lucy.nvim"] = {},

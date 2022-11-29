@@ -2,7 +2,7 @@ require("lualine").setup {
   options = {
     icons_enanibled = true,
     -- theme = require("ofirkai.statuslines.lualine").theme,
-    theme = 'gruvbox',
+    theme = 'auto',
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {
