@@ -42,7 +42,7 @@ local keymaps = {
     -- Move Next Window
     ["<Leader>w"] = "<C-w>w",
     -- Close Window
-    -- ["Q"] = close,
+    ["Q"] = close,
 
     -- Resize with arrows
     ["<C-Up>"] = ":resize +2<CR>",
