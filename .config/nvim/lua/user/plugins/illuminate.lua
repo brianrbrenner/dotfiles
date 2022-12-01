@@ -33,6 +33,7 @@ illuminate.configure {
     "Jaq",
     "NvimTree",
     "TelescopePrompt",
+    "FzfLua",
     "markdown",
     "packer",
     "Outline",

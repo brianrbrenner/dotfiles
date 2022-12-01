@@ -164,6 +164,9 @@ local plugins = {
   -- Telescope
   ["nvim-telescope/telescope.nvim"] = {}, -- FZF
 
+  -- FZF try
+  ["ibhagwan/fzf-lua"] = {},
+
   -- Projects
   ["ahmedkhalf/project.nvim"] = {
     requires = { "neovim/nvim-lspconfig" },

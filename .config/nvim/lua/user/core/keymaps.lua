@@ -96,7 +96,7 @@ local keymaps = {
 
   -- buffers
   ["<leader>b"] = ":BufferLinePick<CR>",
-  ["<leader>B"] = ":Telescope buffers<CR>",
+  ["<leader>B"] = ":FzfLua buffers<CR>",
   command_mode = {
    -- Word Search Increment and Decrement
     ["<Tab>"] = forward_search,
