@@ -94,7 +94,7 @@ local mappings = {
   ["q"] = { ":qa!<cr>", "Exit" },
   ["Q"] = { ":Bdelete!<cr>", "Close Buffer" },
   ["f"] = {
-    ":lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    ":lua require('fzf-lua').files({winopts = { split = 'belowright new' } }, { preview = false })<cr>",
     "Find files",
   },
   ["F"] = { ":FzfLua live_grep<CR>", "Find Text" },
