@@ -166,6 +166,7 @@ local plugins = {
 
   -- FZF try
   ["ibhagwan/fzf-lua"] = {},
+  ["junegunn/fzf"] = { run = "./install --bin" },
 
   -- Projects
   ["ahmedkhalf/project.nvim"] = {

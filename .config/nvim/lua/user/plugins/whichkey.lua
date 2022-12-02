@@ -94,7 +94,7 @@ local mappings = {
   ["q"] = { ":qa!<cr>", "Exit" },
   ["Q"] = { ":Bdelete!<cr>", "Close Buffer" },
   ["f"] = {
-    ":lua require('fzf-lua').files({winopts = { split = 'belowright new' } }, { preview = false })<cr>",
+    ":lua require('fzf-lua').files({winopts = { split = 'belowright new' }, preview_opts = 'hidden'})<cr>",
     "Find files",
   },
   ["F"] = { ":FzfLua live_grep<CR>", "Find Text" },
