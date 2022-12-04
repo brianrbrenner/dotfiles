@@ -39,20 +39,22 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
 
 # format our main prompt for hostname current folder, and permissions.
-PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}%m%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
-# PROMPT="%{$fg[green]%}%n@%m %~ %{$reset_color%}%#> "
+#PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}%m%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
+#PROMPT="%{$fg[green]%}%n@%m %~ %{$reset_color%}%#> "
+PROMPT="%(?:%{$fg_bold[green]%}#> :%{$fg_bold[red]%}#> )%{$fg[cyan]%}%c%{$reset_color%}"
 PROMPT+="\$vcs_info_msg_0_ "
 
 # Plugs
 source /home/$USER/.config/zshplugs/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /home/$USER/.config/zshplugs/zsh-completions/zsh-completions.plugin.zsh
 source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source /home/$USER/.config/zshplugs/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+#source /home/$USER/.config/zshplugs/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Applications
 export TERMINAL=/bin/kitty
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/home/brian/.local/bin:$PATH
+export PATH=/.cargo/bin:$PATH
 export BROWSER=/bin/chromium
 export EDITOR=/bin/nvim
 

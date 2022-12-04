@@ -101,6 +101,8 @@ local plugins = {
   --   branch = "freeze",
   -- },
 
+  ["RRethy/nvim-base16"] = {},
+
   ["navarasu/onedark.nvim"] = {},
 
   ["rmehri01/onenord.nvim"] = {},

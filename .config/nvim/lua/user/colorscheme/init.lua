@@ -1,4 +1,4 @@
-local name = "jellybeans"
+local name = "base16-tomorrow-night"
 
 -- Check for colorscheme configuration, if available or not
 pcall(require, "user.colorscheme.config." ..name)

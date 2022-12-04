@@ -5,7 +5,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: 'xterm-256color'
+  TERM: "xterm-256color"
 
 window:
   # Window padding (changes require restart)
@@ -34,10 +34,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: 'Iosevka'
+    family: "JetBrains Mono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    #style: SemiBold
+    style: SemiBold
 
   # Bold font face
   bold:
@@ -45,10 +45,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: 'Iosevka'
+    family: "JetBrains Mono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
   italic:
@@ -56,44 +56,46 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: 'Iosevka'
+    family: "JetBrains Mono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Point size
-  size: 12
+  size: 7
+
+  startup-mode: Maximized
 
 # kanagawa
-    #colors:
-    #  # Default colors
-    #  primary:
-    #    background: '#232426'
-    #    foreground: '0xcdcecf'
-    #  # Normal colors
-    #  normal:
-    #    black:   '0x393b44'
-    #    red:     '0xc94f6d'
-    #    green:   '0x81b29a'
-    #    yellow:  '0xdbc074'
-    #    blue:    '0x719cd6'
-    #    magenta: '0x9d79d6'
-    #    cyan:    '0x63cdcf'
-    #    white:   '0xdfdfe0'
-    #  # Bright colors
-    #  bright:
-    #    black:   '0x475072'
-    #    red:     '0xd6616b'
-    #    green:   '0x58cd8b'
-    #    yellow:  '0xffe37e'
-    #    blue:    '0x84cee4'
-    #    magenta: '0xb8a1e3'
-    #    cyan:    '0x59f0ff'
-    #    white:   '0xf2f2f2'
-    #  indexed_colors:
-    #    - { index: 16, color: '0xf4a261' }
-    #    - { index: 17, color: '0xd67ad2' }
-  
+#colors:
+#  # Default colors
+#  primary:
+#    background: '#232426'
+#    foreground: '0xcdcecf'
+#  # Normal colors
+#  normal:
+#    black:   '0x393b44'
+#    red:     '0xc94f6d'
+#    green:   '0x81b29a'
+#    yellow:  '0xdbc074'
+#    blue:    '0x719cd6'
+#    magenta: '0x9d79d6'
+#    cyan:    '0x63cdcf'
+#    white:   '0xdfdfe0'
+#  # Bright colors
+#  bright:
+#    black:   '0x475072'
+#    red:     '0xd6616b'
+#    green:   '0x58cd8b'
+#    yellow:  '0xffe37e'
+#    blue:    '0x84cee4'
+#    magenta: '0xb8a1e3'
+#    cyan:    '0x59f0ff'
+#    white:   '0xf2f2f2'
+#  indexed_colors:
+#    - { index: 16, color: '0xf4a261' }
+#    - { index: 17, color: '0xd67ad2' }
+
 # monokai
 #colors:
 #  primary:
@@ -123,7 +125,7 @@ font:
 #    cyan:    '#78DCE8'
 #    white:   '#FCFCFA'
 
-# gruvbox-flat 
+# gruvbox-flat
 #colors:
 #  # Default colors
 #  primary:
@@ -157,39 +159,81 @@ font:
 #    - { index: 16, color: '0xe78a4e' }
 #    - { index: 17, color: '0xc14a4a' }
 
+# Base16 Tomorrow Night 256 - alacritty color config
+# Chris Kempson (http://chriskempson.com)
 colors:
-    primary:
-      background: '#232426'
-      foreground: '#d3c6aa'
-    normal:
-      black:   '#4b565c'
-      red:     '#e67e80'
-      green:   '#a7c080'
-      yellow:  '#dbbc7f'
-      blue:    '#7fbbb3'
-      magenta: '#d699b6'
-      cyan:    '#83c092'
-      white:   '#d3c6aa'
-    bright:
-      black:   '#4b565c'
-      red:     '#e67e80'
-      green:   '#a7c080'
-      yellow:  '#dbbc7f'
-      blue:    '#7fbbb3'
-      magenta: '#d699b6'
-      cyan:    '#83c092'
-      white:   '#d3c6aa'
+  # Default colors
+  primary:
+    background: "0x1d1f21"
+    foreground: "0xc5c8c6"
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: "0x1d1f21"
+    cursor: "0xc5c8c6"
+
+  # Normal colors
+  normal:
+    black: "0x1d1f21"
+    red: "0xcc6666"
+    green: "0xb5bd68"
+    yellow: "0xf0c674"
+    blue: "0x81a2be"
+    magenta: "0xb294bb"
+    cyan: "0x8abeb7"
+    white: "0xc5c8c6"
+
+  # Bright colors
+  bright:
+    black: "0x969896"
+    red: "0xcc6666"
+    green: "0xb5bd68"
+    yellow: "0xf0c674"
+    blue: "0x81a2be"
+    magenta: "0xb294bb"
+    cyan: "0x8abeb7"
+    white: "0xffffff"
+
+  indexed_colors:
+    - { index: 16, color: "0xde935f" }
+    - { index: 17, color: "0xa3685a" }
+    - { index: 18, color: "0x282a2e" }
+    - { index: 19, color: "0x373b41" }
+    - { index: 20, color: "0xb4b7b4" }
+    - { index: 21, color: "0xe0e0e0" }
+
+# colors:
+#     primary:
+#       background: '#232426'
+#       foreground: '#d3c6aa'
+#     normal:
+#       black:   '#4b565c'
+#       red:     '#e67e80'
+#       green:   '#a7c080'
+#       yellow:  '#dbbc7f'
+#       blue:    '#7fbbb3'
+#       magenta: '#d699b6'
+#       cyan:    '#83c092'
+#       white:   '#d3c6aa'
+#     bright:
+#       black:   '#4b565c'
+#       red:     '#e67e80'
+#       green:   '#a7c080'
+#       yellow:  '#dbbc7f'
+#       blue:    '#7fbbb3'
+#       magenta: '#d699b6'
+#       cyan:    '#83c092'
+#       white:   '#d3c6aa'
 
 cursor:
-  # Cursor style
-  #
-  # Values for `style`:
-  #   - ▇ Block
-  #   - _ Underline
-  #   - | Beam
-  style: 'Beam'
+  style:
+    shape: Block
+    blinking: On
+  blink_interval: 750
+  blink_timeout: 5
 
-#background_opacity: .97
+vi_mode_style:
+  shape:
+    Block
 
-env:
-  TERM: xterm-256color
+    #window.opacity: .97
