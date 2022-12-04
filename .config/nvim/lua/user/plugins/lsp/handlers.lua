@@ -40,8 +40,7 @@ M.setup = function()
 
   vim.diagnostic.config(config)
 
-  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
+  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
     -- delay update diagnostics
     update_in_insert = false,
   })
@@ -78,12 +77,13 @@ M.on_attach = function(client, bufnr)
   lsp_highlight(client)
 
   -- Get signatures (and _only_ signatures) when in argument lists.
-  require "lsp_signature".on_attach({
+  require("lsp_signature").on_attach {
     doc_lines = 0,
     handler_opts = {
-      border = "none"
-    }, bufnr
-  })
+      border = "none",
+    },
+    bufnr,
+  }
 end
 
 return M

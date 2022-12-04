@@ -11,13 +11,6 @@ local modes = {
   command_mode = "c",
 }
 
-local function close()
-  if vim.bo.buftype == "terminal" then
-    vim.cmd "Bdelete!"
-  end
-  vim.cmd "silent! close"
-end
-
 local function forward_search()
   if fn.getcmdtype() == "/" or fn.getcmdtype() == "?" then
     return "<CR>/<C-r>/"
@@ -42,7 +35,10 @@ local keymaps = {
     -- Move Next Window
     ["<Leader>w"] = "<C-w>w",
     -- Close Window
-    ["Q"] = close,
+    ["Q"] = ":Bdelete!<CR>",
+    -- Center screen on up and down half page
+    ["<C-u>"] = "<C-u>zz",
+    ["<C-d>"] = "<C-d>zz",
 
     -- Resize with arrows
     ["<C-Up>"] = ":resize +2<CR>",
@@ -99,7 +95,7 @@ local keymaps = {
   ["<leader>b"] = ":BufferLinePick<CR>",
   ["<leader>B"] = ":FzfLua buffers<CR>",
   command_mode = {
-   -- Word Search Increment and Decrement
+    -- Word Search Increment and Decrement
     ["<Tab>"] = forward_search,
     ["<S-Tab>"] = backward_search,
   },

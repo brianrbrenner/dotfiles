@@ -84,15 +84,27 @@ local function toggleAlpha()
   end
 end
 
+-- Toggle Diagnostics for buffer
+local diagnostics_active = true
+local toggle_diagnostics = function()
+  diagnostics_active = not diagnostics_active
+  if diagnostics_active then
+    vim.api.nvim_echo({ { "Show diagnostics" } }, false, {})
+    vim.diagnostic.enable()
+  else
+    vim.api.nvim_echo({ { "Disable diagnostics" } }, false, {})
+    vim.diagnostic.disable()
+  end
+end
+
 local mappings = {
   ["a"] = { toggleAlpha, "Alpha" },
-  ["b"] = {":BufferLinePick<CR>", "Pick buffer"},
-  ["B"] = {":FzfLua buffers<CR>", "Pick buffer from list"},
+  ["b"] = { ":BufferLinePick<CR>", "Pick buffer" },
+  ["B"] = { ":FzfLua buffers<CR>", "Pick buffer from list" },
   ["r"] = { ":%d+<cr>", "Remove All Text" },
   ["y"] = { ":%y+<cr>", "Yank All Text" },
   ["e"] = { ":NvimTreeToggle<cr>", "Explorer" },
   ["q"] = { ":qa!<cr>", "Exit" },
-  ["Q"] = { ":Bdelete!<cr>", "Close Buffer" },
   ["f"] = {
     ":lua require('fzf-lua').files({winopts = { split = 'belowright new' }, preview_opts = 'hidden'})<cr>",
     "Find files",
@@ -145,6 +157,7 @@ local mappings = {
     },
     r = { ":Lspsaga rename<cr>", "Rename" },
     d = { ":FzfLua diagnostics<cr>", "Diagnostics" },
+    D = { toggle_diagnostics, "Toggle Diagnostics" },
     s = { ":FzfLua lsp_document_symbols<cr>", "Document Symbols" },
     S = { ":FzfLua lsp_workspace_symbols<cr>", "Workspace Symbols" },
   },
