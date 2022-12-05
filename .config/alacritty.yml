@@ -228,9 +228,9 @@ colors:
 cursor:
   style:
     shape: Block
-    blinking: On
-  blink_interval: 750
-  blink_timeout: 5
+    blinking: Always
+  blink_interval: 500
+  blink_timeout: 0
 
 vi_mode_style:
   shape:
