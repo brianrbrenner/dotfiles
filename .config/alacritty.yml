@@ -14,7 +14,7 @@ window:
   # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 5
-    y: 0
+    y: 1
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -125,6 +125,30 @@ font:
 #    cyan:    '#78DCE8'
 #    white:   '#FCFCFA'
 
+# black-metal
+colors:
+  primary:
+    background: "#000000"
+    foreground: "#c1c1c1"
+  normal:
+    black: "#000000"
+    blue: "#888888"
+    cyan: "#aaaaaa"
+    red: "#dd9999"
+    magenta: "#999999"
+    green: "#5f8787"
+    white: "#c1c1c1"
+    yellow: "#a06666"
+  bright:
+    black: "#333333"
+    blue: "#999999"
+    cyan: "#444444"
+    green: "#121212"
+    magenta: "#999999"
+    red: "#aaaaaa"
+    white: "#c1c1c1"
+    yellow: "#222222"
+
 # gruvbox-flat
 #colors:
 #  # Default colors
@@ -159,48 +183,85 @@ font:
 #    - { index: 16, color: '0xe78a4e' }
 #    - { index: 17, color: '0xc14a4a' }
 
+# Base16 Gruvbox dark, hard - alacritty color config
+# Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x1d2021'
+#     foreground: '0xd5c4a1'
+
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: '0x1d2021'
+#     cursor: '0xd5c4a1'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x1d2021'
+#     red:     '0xfb4934'
+#     green:   '0xb8bb26'
+#     yellow:  '0xfabd2f'
+#     blue:    '0x83a598'
+#     magenta: '0xd3869b'
+#     cyan:    '0x8ec07c'
+#     white:   '0xd5c4a1'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x665c54'
+#     red:     '0xfe8019'
+#     green:   '0x3c3836'
+#     yellow:  '0x504945'
+#     blue:    '0xbdae93'
+#     magenta: '0xebdbb2'
+#     cyan:    '0xd65d0e'
+#     white:   '0xfbf1c7'
+
+# draw_bold_text_with_bright_colors: false
+
 # Base16 Tomorrow Night 256 - alacritty color config
 # Chris Kempson (http://chriskempson.com)
-colors:
-  # Default colors
-  primary:
-    background: "0x1d1f21"
-    foreground: "0xc5c8c6"
+# colors:
+#   # Default colors
+#   primary:
+#     background: "0x1d1f21"
+#     foreground: "0xc5c8c6"
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: "0x1d1f21"
-    cursor: "0xc5c8c6"
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: "0x1d1f21"
+#     cursor: "0xc5c8c6"
 
-  # Normal colors
-  normal:
-    black: "0x1d1f21"
-    red: "0xcc6666"
-    green: "0xb5bd68"
-    yellow: "0xf0c674"
-    blue: "0x81a2be"
-    magenta: "0xb294bb"
-    cyan: "0x8abeb7"
-    white: "0xc5c8c6"
+#   # Normal colors
+#   normal:
+#     black: "0x1d1f21"
+#     red: "0xcc6666"
+#     green: "0xb5bd68"
+#     yellow: "0xf0c674"
+#     blue: "0x81a2be"
+#     magenta: "0xb294bb"
+#     cyan: "0x8abeb7"
+#     white: "0xc5c8c6"
 
-  # Bright colors
-  bright:
-    black: "0x969896"
-    red: "0xcc6666"
-    green: "0xb5bd68"
-    yellow: "0xf0c674"
-    blue: "0x81a2be"
-    magenta: "0xb294bb"
-    cyan: "0x8abeb7"
-    white: "0xffffff"
+#   # Bright colors
+#   bright:
+#     black: "0x969896"
+#     red: "0xcc6666"
+#     green: "0xb5bd68"
+#     yellow: "0xf0c674"
+#     blue: "0x81a2be"
+#     magenta: "0xb294bb"
+#     cyan: "0x8abeb7"
+#     white: "0xffffff"
 
-  indexed_colors:
-    - { index: 16, color: "0xde935f" }
-    - { index: 17, color: "0xa3685a" }
-    - { index: 18, color: "0x282a2e" }
-    - { index: 19, color: "0x373b41" }
-    - { index: 20, color: "0xb4b7b4" }
-    - { index: 21, color: "0xe0e0e0" }
+#   indexed_colors:
+#     - { index: 16, color: "0xde935f" }
+#     - { index: 17, color: "0xa3685a" }
+#     - { index: 18, color: "0x282a2e" }
+#     - { index: 19, color: "0x373b41" }
+#     - { index: 20, color: "0xb4b7b4" }
+#     - { index: 21, color: "0xe0e0e0" }
 
 # colors:
 #     primary:
@@ -233,7 +294,6 @@ cursor:
   blink_timeout: 0
 
 vi_mode_style:
-  shape:
-    Block
+  shape: Block
 
-    #window.opacity: .97
+window.opacity: 0.97
