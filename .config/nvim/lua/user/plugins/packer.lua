@@ -163,6 +163,9 @@ local plugins = {
 
   ["SmiteshP/nvim-navic"] = {},
 
+  -- JAVA
+  ['mfussenegger/nvim-jdtls'] = {},
+
   -- Telescope
   ["nvim-telescope/telescope.nvim"] = {}, -- FZF
 
