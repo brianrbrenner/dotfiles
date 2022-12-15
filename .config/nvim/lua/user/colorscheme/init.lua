@@ -1,4 +1,4 @@
-local name = "base16-black-metal"
+local name = "base16-gruvbox-dark-hard"
 
 -- Check for colorscheme configuration, if available or not
 pcall(require, "user.colorscheme.config." ..name)
