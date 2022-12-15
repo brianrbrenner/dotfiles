@@ -173,6 +173,9 @@ local plugins = {
   ["ibhagwan/fzf-lua"] = {},
   ["junegunn/fzf"] = { run = "./install --bin" },
 
+  -- ORG mode
+  ['nvim-orgmode/orgmode'] = {},
+
   -- Projects
   ["ahmedkhalf/project.nvim"] = {
     requires = { "neovim/nvim-lspconfig" },
