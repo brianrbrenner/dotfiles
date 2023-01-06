@@ -89,6 +89,7 @@ local keymaps = {
     -- Move text up and down
     ["<A-j>"] = ":m '>+1<CR>gv=gv",
     ["<A-k>"] = ":m '<-2<CR>gv=gv",
+    ["<leader>p"] = "\"_dP",
   },
 
   -- buffers
