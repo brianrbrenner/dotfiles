@@ -193,6 +193,7 @@ local plugins = {
   ["nvim-treesitter/nvim-treesitter"] = {
     run = ":TSUpdate",
   },
+  ['nvim-treesitter/nvim-treesitter-context'] = {},
 
   -- Git
   ["lewis6991/gitsigns.nvim"] = {}, -- Git Signs

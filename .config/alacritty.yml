@@ -15,6 +15,8 @@ window:
   padding:
     x: 5
     y: 1
+  decorations: None
+  startup_mode: Maximized
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -62,9 +64,8 @@ font:
     style: Italic
 
   # Point size
-  size: 10
+  size: 12
 
-  startup-mode: Maximized
 
 # kanagawa
 #colors:
@@ -126,28 +127,28 @@ font:
 #    white:   '#FCFCFA'
 
 # black-metal
-colors:
-  primary:
-    background: "#000000"
-    foreground: "#c1c1c1"
-  normal:
-    black: "#000000"
-    blue: "#888888"
-    cyan: "#aaaaaa"
-    red: "#dd9999"
-    magenta: "#999999"
-    green: "#5f8787"
-    white: "#c1c1c1"
-    yellow: "#a06666"
-  bright:
-    black: "#333333"
-    blue: "#999999"
-    cyan: "#444444"
-    green: "#121212"
-    magenta: "#999999"
-    red: "#aaaaaa"
-    white: "#c1c1c1"
-    yellow: "#222222"
+#colors:
+#  primary:
+#    background: "#000000"
+#    foreground: "#c1c1c1"
+#  normal:
+#    black: "#000000"
+#    blue: "#888888"
+#    cyan: "#aaaaaa"
+#    red: "#dd9999"
+#    magenta: "#999999"
+#    green: "#5f8787"
+#    white: "#c1c1c1"
+#    yellow: "#a06666"
+#  bright:
+#    black: "#333333"
+#    blue: "#999999"
+#    cyan: "#444444"
+#    green: "#121212"
+#    magenta: "#999999"
+#    red: "#aaaaaa"
+#    white: "#c1c1c1"
+#    yellow: "#222222"
 
 # gruvbox-flat
 #colors:
@@ -185,40 +186,40 @@ colors:
 
 # Base16 Gruvbox dark, hard - alacritty color config
 # Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x1d2021'
-#     foreground: '0xd5c4a1'
+colors:
+  # Default colors
+ primary:
+   background: '0x1d2021'
+   foreground: '0xd5c4a1'
 
-#   # Colors the cursor will use if `custom_cursor_colors` is true
-#   cursor:
-#     text: '0x1d2021'
-#     cursor: '0xd5c4a1'
+ # Colors the cursor will use if `custom_cursor_colors` is true
+ cursor:
+   text: '0x1d2021'
+   cursor: '0xd5c4a1'
 
-#   # Normal colors
-#   normal:
-#     black:   '0x1d2021'
-#     red:     '0xfb4934'
-#     green:   '0xb8bb26'
-#     yellow:  '0xfabd2f'
-#     blue:    '0x83a598'
-#     magenta: '0xd3869b'
-#     cyan:    '0x8ec07c'
-#     white:   '0xd5c4a1'
+ # Normal colors
+ normal:
+   black:   '0x1d2021'
+   red:     '0xfb4934'
+   green:   '0xb8bb26'
+   yellow:  '0xfabd2f'
+   blue:    '0x83a598'
+   magenta: '0xd3869b'
+   cyan:    '0x8ec07c'
+   white:   '0xd5c4a1'
 
-#   # Bright colors
-#   bright:
-#     black:   '0x665c54'
-#     red:     '0xfe8019'
-#     green:   '0x3c3836'
-#     yellow:  '0x504945'
-#     blue:    '0xbdae93'
-#     magenta: '0xebdbb2'
-#     cyan:    '0xd65d0e'
-#     white:   '0xfbf1c7'
+ # Bright colors
+ bright:
+   black:   '0x665c54'
+   red:     '0xfe8019'
+   green:   '0x3c3836'
+   yellow:  '0x504945'
+   blue:    '0xbdae93'
+   magenta: '0xebdbb2'
+   cyan:    '0xd65d0e'
+   white:   '0xfbf1c7'
 
-# draw_bold_text_with_bright_colors: false
+ draw_bold_text_with_bright_colors: false
 
 # Base16 Tomorrow Night 256 - alacritty color config
 # Chris Kempson (http://chriskempson.com)
