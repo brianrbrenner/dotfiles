@@ -1,2 +1,5 @@
 .vim/plugged/
 .config/nvim/lua/packer_compiled.lua
+..dir-locals.*
+.dir-locals.el
+.config/emacs/*
