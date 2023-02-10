@@ -3,3 +3,4 @@
 ..dir-locals.*
 .dir-locals.el
 .config/emacs/*
+*.o
