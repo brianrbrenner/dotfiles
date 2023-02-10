@@ -38,6 +38,7 @@ export SEP2=""
 #. "$DIR/bar-functions/dwm_mail.sh"
 #. "$DIR/bar-functions/dwm_mpc.sh"
 #. "$DIR/bar-functions/dwm_networkmanager.sh"
+. "$DIR/bar-functions/dwm_xbps.sh"
 . "$DIR/bar-functions/dwm_pulse.sh"
 #. "$DIR/bar-functions/dwm_resources.sh"
 #. "$DIR/bar-functions/dwm_spotify.sh"
@@ -77,6 +78,7 @@ do
     #upperbar="$upperbar$(dwm_mpc)"
     upperbar="$upperbar$(dwm_backlight) "
     upperbar="$upperbar$(dwm_pulse) "
+    upperbar="$upperbar$(dwm_xbps)"
     upperbar="$upperbar$(dwm_battery_two)"
     #upperbar="$upperbar$(dwm_resources)"
     #upperbar="$upperbar$(dwm_spotify)"
@@ -85,12 +87,12 @@ do
     #upperbar="$upperbar${__DWM_BAR_NETWORKMANAGER__}"
     #upperbar="$upperbar${__DWM_BAR_WEATHER__}"
     #upperbar="$upperbar$(dwm_network_speed)"; dwm_network_speed_record
-   
+
     # Append results of each func one by one to the lowerbar string
     lowerbar=""
-    
+
     xsetroot -name "$upperbar"
-    # Uncomment the line below to enable the lowerbar 
+    # Uncomment the line below to enable the lowerbar
     #xsetroot -name "$upperbar;$lowerbar"
     sleep 1
 done

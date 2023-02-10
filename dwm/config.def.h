@@ -124,8 +124,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
+	{ MODKEY|ShiftMask|ControlMask, XK_q,      quit,     {0} },
 	{ MODKEY,                       XK_space,  spawn,          SHCMD("dmenu_run") },
-	{ MODKEY|ShiftMask,             XK_space,      setlayout,      {0} }, 
+	{ MODKEY|ShiftMask,             XK_space,      setlayout,      {0} },
 	{ MODKEY,			XK_w,      spawn,          SHCMD("$BROWSER") },
 	{ MODKEY,			XK_r,      spawn,	   SHCMD("$TERMINAL -e ranger") },
 	{ MODKEY,			XK_y,      spawn,		   SHCMD("flameshot gui -p ~/Pictures/screenshots") },
@@ -167,7 +168,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY,                       XK_F2,      spawn,  SHCMD("screenkey -s small --scr 2 -p fixed -g 400x100+2150+1330 --opacity .6 --font-color white") },
 	{ MODKEY,                       XK_F3,      spawn,  SHCMD("killall screenkey") },
-	{ MODKEY|ShiftMask|ControlMask,             XK_q,      quit,           {0} },
 	/* { MODKEY,                       XK_0,      view,           {.ui = ~0 } }, */
 	/* { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } }, */
 };
