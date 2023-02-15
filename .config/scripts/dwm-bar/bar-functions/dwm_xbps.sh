@@ -11,4 +11,3 @@ dwm_xbps() {
       echo ""
   fi
 }
-

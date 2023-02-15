@@ -53,6 +53,11 @@ parallelize() {
         printf "Running parallel processes\n"
         #dwm_networkmanager &
         #dwm_weather &
+        dwm_pulse &
+        dwm_backlight &
+        dwm_date &
+        dwm_xbps &
+        dwm_battery_two &
         sleep 5
     done
 }
@@ -71,15 +76,15 @@ do
     #upperbar="$upperbar$(dwm_connman)"
     #upperbar="$upperbar$(dwm_countdown)"
     #upperbar="$upperbar$(dwm_currency)"
-    upperbar="$upperbar$(dwm_date) "
+    upperbar=" $upperbar$(dwm_date) "
     #upperbar="$upperbar$(dwm_keyboard)"
     #upperbar="$upperbar$(dwm_loadavg)"
     #upperbar="$upperbar$(dwm_mail)"
     #upperbar="$upperbar$(dwm_mpc)"
-    upperbar="$upperbar$(dwm_backlight) "
-    upperbar="$upperbar$(dwm_pulse) "
-    upperbar="$upperbar$(dwm_xbps)"
-    upperbar="$upperbar$(dwm_battery_two)"
+    upperbar=" $upperbar$(dwm_backlight) "
+    upperbar=" $upperbar$(dwm_pulse) "
+    upperbar=" $upperbar$(dwm_xbps) "
+    upperbar=" $upperbar$(dwm_battery_two) "
     #upperbar="$upperbar$(dwm_resources)"
     #upperbar="$upperbar$(dwm_spotify)"
     #upperbar="$upperbar$(dwm_transmission)"
