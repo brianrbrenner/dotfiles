@@ -51,7 +51,7 @@ source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlig
 #source /home/$USER/.config/zshplugs/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Applications
-export TERMINAL=/bin/kitty
+export TERMINAL=/bin/alacritty
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/home/brian/.local/bin:$PATH
 export PATH=/.cargo/bin:$PATH
@@ -70,6 +70,7 @@ alias ga='git add'
 alias gp='git push origin'
 # original vim
 alias vim='vim-normal'
+alias mdb='sudo mariadb -u admin_user -p'
 
 # rx used to fzf in terminal
 function displayhelp() {

@@ -55,10 +55,7 @@ parallelize() {
         #dwm_weather &
         dwm_pulse &
         dwm_backlight &
-        dwm_date &
-        dwm_xbps &
-        dwm_battery_two &
-        sleep 5
+        sleep 1
     done
 }
 parallelize &
@@ -99,5 +96,5 @@ do
     xsetroot -name "$upperbar"
     # Uncomment the line below to enable the lowerbar
     #xsetroot -name "$upperbar;$lowerbar"
-    sleep 1
+    sleep 60
 done
