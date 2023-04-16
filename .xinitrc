@@ -8,15 +8,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
-
-
-
-
-
-
-
     xrdb -merge $sysresources
-
 fi
 
 if [ -f $sysmodmap ]; then
@@ -24,15 +16,7 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
     xrdb -merge "$userresources"
-
 fi
 
 if [ -f "$usermodmap" ]; then
@@ -55,15 +39,17 @@ nitrogen --restore &
 picom &
 
 #xsetroot
-/home/$USER/.config/scripts/datespt.sh &
+/home/$USER/.config/scripts/dwm-bar/dwm_bar.sh &
+
+#default 50% brightness
+brightnessctl set 50%
 
 #systray
-cbatticon &
+blueman-applet &
 pasystray &
 nm-applet &
 
-#playerctl for spotify
-playerctl &
-
-#dwm
+# #dwm and lock
+xset dpms 300 &
+xss-lock -- slock &
 exec dwm

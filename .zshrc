@@ -50,17 +50,36 @@ source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlig
 #source /home/$USER/.config/zshplugs/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Applications
-export TERMINAL=/usr/local/bin/st
-export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
+export TERMINAL=/bin/alacritty
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/home/brian/.local/bin:$PATH
+export PATH=/.cargo/bin:$PATH
+export BROWSER=/bin/chromium
+export EDITOR=/bin/nvim
 
-# Aliases
-alias sau="sudo apt update && sudo apt upgrade"
-alias ga="git add"
-alias gcm="git commit -m"
-alias gp="git push"
-alias gco="git checkout"
-alias nvide="neovide"
+# Aliases - ubuntu
+# alias sau="sudo apt update && sudo apt upgrade"
+# alias ga="git add"
+# alias gcm="git commit -m"
+# alias gp="git push"
+# alias gco="git checkout"
+# alias nvide="neovide"
+# =======
+
+# aliases
+alias xbq="sudo xbps-query -Rs"
+alias xbi="sudo xbps-install -S"
+alias xbu="sudo xbps-install -Su"
+alias nv="nvim"
+alias ls='ls --color'
+alias gcm='git commit -m'
+alias gc='git checkout'
+alias ga='git add'
+alias gp='git push origin'
+# original vim
+alias vim='vim-normal'
+alias mdb='sudo mariadb -u admin_user -p'
 
 # rx used to fzf in terminal
 function displayhelp() {
