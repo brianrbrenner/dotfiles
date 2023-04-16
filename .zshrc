@@ -1,20 +1,19 @@
 #!/bin/sh
 
-## reattach tmux
+## autoload vcs and colors
+autoload -Uz vcs_info
+autoload -U colors && colors
+
+## the mux...
 if [ -z "$TMUX" ]
 then
     tmux attach -t MAIN || tmux new -s MAIN
 fi
 
+# enable only git 
+zstyle ':vcs_info:*' enable git 
 
-## autoload vcs and colors
-autoload -Uz vcs_info
-autoload -U colors && colors
-
-# enable only git
-zstyle ':vcs_info:*' enable git
-
-# setup a hook that runs before every ptompt.
+# setup a hook that runs before every ptompt. 
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
@@ -22,7 +21,7 @@ setopt prompt_subst
 # add a function to check for untracked files in the directory.
 # from https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-#
+# 
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then
@@ -51,25 +50,17 @@ source /home/$USER/.config/zshplugs/fast-syntax-highlighting/fast-syntax-highlig
 #source /home/$USER/.config/zshplugs/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Applications
-export TERMINAL=/bin/kitty
+export TERMINAL=/usr/local/bin/st
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/home/brian/.local/bin:$PATH
-export PATH=/.cargo/bin:$PATH
-export BROWSER=/bin/chromium
-export EDITOR=/bin/nvim
+export PATH="$HOME/.local/bin:$PATH"
 
-# aliases
-alias xbq="sudo xbps-query -Rs"
-alias xbi="sudo xbps-install -S"
-alias xbu="sudo xbps-install -Su"
-alias nv="nvim"
-alias ls='ls --color'
-alias gcm='git commit -m'
-alias gc='git checkout'
-alias ga='git add'
-alias gp='git push origin'
-# original vim
-alias vim='vim-normal'
+# Aliases
+alias sau="sudo apt update && sudo apt upgrade"
+alias ga="git add"
+alias gcm="git commit -m"
+alias gp="git push"
+alias gco="git checkout"
+alias nvide="neovide"
 
 # rx used to fzf in terminal
 function displayhelp() {
@@ -77,7 +68,6 @@ function displayhelp() {
   rx: open files, cd into directories and stuff
   using find and fzf.
   usage: rx [options]
-
   OPTIONS
 
   => no arguments \n\t open files via \$opener. (xdg-open is set as default)
@@ -105,3 +95,20 @@ function rx() {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias luamake=/home/brian/lua-language-server/3rd/luamake/luamake
+
+# NVIM APP SWITCHING
+alias nviml="NVIM_APPNAME"="lazyvim nvim"
+
+function nvims() {
+  items=("default" "LazyVim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
