@@ -1,4 +1,56 @@
 return {
+  --
+  -- LSP
+  {
+    "neovim/nvim-lspconfig",
+    -- other settings removed for brevity
+    opts = {
+      servers = {
+        tailwindcss = {},
+        eslint = {
+          settings = {
+            -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
+            workingDirectory = { mode = "auto" },
+          },
+        },
+      },
+      setup = {
+        eslint = function()
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            callback = function(event)
+              if require("lspconfig.util").get_active_client_by_name(event.buf, "eslint") then
+                vim.cmd("EslintFixAll")
+              end
+            end,
+          })
+        end,
+      },
+    },
+  },
+  --
+  -- MASON
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      table.insert(opts.ensure_installed, "prettierd")
+    end,
+  },
+  --
+  -- NULL-LS
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    opts = function(_, opts)
+      local nls = require("null-ls")
+      table.insert(opts.sources, nls.builtins.formatting.prettierd)
+      local format_kinds = opts.formatting.format
+      opts.formatting.format = function(entry, item)
+        format_kinds(entry, item) -- add icons
+        return require("tailwindcss-colorizer-cmp").formatter(entry, item)
+      end
+    end,
+  },
+  --
+  -- TOGGLETERM
   {
     "akinsho/toggleterm.nvim",
     version = "*",
@@ -38,6 +90,8 @@ return {
       end
     end,
   },
+  --
+  -- COLORSCHEME
   { "catppuccin/nvim", name = "catppuccin" },
   {
     "LazyVim/LazyVim",
@@ -52,5 +106,22 @@ return {
     config = function()
       require("copilot").setup()
     end,
+  },
+  --
+  -- tailwindcss
+  {
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+      user_default_options = {
+        tailwind = true,
+      },
+    },
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "roobert/tailwindcss-colorizer-cmp.nvim",
+      config = true,
+    },
   },
 }
