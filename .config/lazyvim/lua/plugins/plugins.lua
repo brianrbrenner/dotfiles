@@ -127,4 +127,8 @@ return {
       end
     end,
   },
+  --
+  -- bufdel
+
+  { "ojroques/nvim-bufdel" },
 }
