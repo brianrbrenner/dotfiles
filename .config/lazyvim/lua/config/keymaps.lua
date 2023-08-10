@@ -10,3 +10,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- buf delete
 vim.keymap.set("n", "Q", ":BufDel!<CR>")
+
+-- easy escape
+vim.keymap.set("i", "jk", "<ESC>")
+vim.keymap.set("i", "kj", "<ESC>")

@@ -6,6 +6,7 @@ return {
     -- other settings removed for brevity
     opts = {
       servers = {
+        clangd = {},
         tailwindcss = {},
         eslint = {
           settings = {
